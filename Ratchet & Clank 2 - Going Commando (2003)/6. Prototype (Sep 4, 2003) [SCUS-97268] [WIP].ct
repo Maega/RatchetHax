@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="42">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"Level 0: World State (Debug "Update" Options) (0 is all off, 15 is all on except step aka default)"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>201BC93C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"Level 0:  Debug: Control (normal = 0, camera = 1, cam+chr = 2, volume = 3)"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>201BC940</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>3</ID>
+      <Description>"Health"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>2018FAEC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"Bolts"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>2013C568</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
