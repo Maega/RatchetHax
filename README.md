@@ -1,10 +1,14 @@
 # RatchetHax
 
-Cheat Engine tables & other RE/modding tools for the Ratchet & Clank Series, including several known prototype builds
+Cheat Engine tables for the Ratchet & Clank Series, including several known prototype builds. Useful for cheating, speedrunning, modding, reverse engineering and everything in between.
+
+Compatible with PCSX2 1.6.0, your mileage may vary on other versions.
 
 **:construction: Cheat tables are currently a work-in-progress and may be unfinished, have missing sections or incorrect addresses :construction:**
 
 These cheat tables are intended to be friendly for beginners, all listed addresses have dropdown menus to select supported values.
+
+Issues and Pull Requests are welcome :thumbsup:
  
 ## :information_source: Features
 
