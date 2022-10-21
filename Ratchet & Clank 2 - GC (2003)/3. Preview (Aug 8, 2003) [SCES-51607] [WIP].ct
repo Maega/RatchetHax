@@ -924,6 +924,26 @@
         </CheatEntry>
       </CheatEntries>
     </CheatEntry>
+    <CheatEntry>
+      <ID>280</ID>
+      <Description>"X Coordinate"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Float</VariableType>
+      <Address>2018AD10</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>281</ID>
+      <Description>"Y Coordinate"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Float</VariableType>
+      <Address>2018AD14</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>279</ID>
+      <Description>"Z Coordinate"</Description>
+      <VariableType>Float</VariableType>
+      <Address>2018AD18</Address>
+    </CheatEntry>
   </CheatEntries>
   <UserdefinedSymbols/>
 </CheatTable>
