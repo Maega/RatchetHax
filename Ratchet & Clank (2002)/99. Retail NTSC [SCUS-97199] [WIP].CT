@@ -2299,6 +2299,20 @@
       <VariableType>Float</VariableType>
       <Address>20151B64</Address>
     </CheatEntry>
+    <CheatEntry>
+      <ID>307</ID>
+      <Description>"Current Menu Screen"</Description>
+      <DropDownList DisplayValueAsItem="1">1780232:Main Menu
+1782328:Weapons Menu
+1781096:Gadgets Menu
+1783608:Quick Select Menu
+1794360:Items Menu
+1785368:Help Menu
+1789392:Options Menu
+</DropDownList>
+      <VariableType>4 Bytes</VariableType>
+      <Address>201BA174</Address>
+    </CheatEntry>
   </CheatEntries>
   <UserdefinedSymbols/>
 </CheatTable>
