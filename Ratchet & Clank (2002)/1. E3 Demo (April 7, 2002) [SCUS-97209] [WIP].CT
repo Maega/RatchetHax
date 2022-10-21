@@ -27,6 +27,35 @@ FFFFFFFF:Debug Menu
       <Address>20152084</Address>
     </CheatEntry>
     <CheatEntry>
+      <ID>140</ID>
+      <Description>"Equipped Weapon / Gadget"</Description>
+      <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">6:Wrench
+7:Suck Cannon
+8:Bomb Glove
+9:Devastator
+10:Swingshot
+11:Visibomb Gun
+12:Taunter
+13:Blaster
+14:Pyrocitor
+15:Mackerel 1000
+16:Mine Glove
+17:Walloper
+18:Tesla Claw
+19:Glove of Doom
+20:Morpha Ray
+21:Hydro-Displacer
+22:R.Y.N.O.
+23:Defense Droids
+24:Inflato-Ratchet Glove
+25:Trespasser
+26:Metal Detector
+30:Holo-Guise
+</DropDownList>
+      <VariableType>Byte</VariableType>
+      <Address>201381B8</Address>
+    </CheatEntry>
+    <CheatEntry>
       <ID>4</ID>
       <Description>"Current Level ID (Sets local map, skybox state and other params)"</Description>
       <ShowAsSigned>0</ShowAsSigned>
@@ -39,6 +68,467 @@ FFFFFFFF:Debug Menu
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
       <Address>20199F40</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>6</ID>
+      <Description>"Debug Mode"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>2019A924</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>139</ID>
+      <Description>"&gt;&gt; Debug Functions"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <GroupHeader>1</GroupHeader>
+      <Address>2015E3C4</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>128</ID>
+          <Description>"DRAW State"</Description>
+          <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:None
+1:Darken
+2:Env Coll
+3:Darken, Env Coll
+4:Moby Coll
+5:Darken, Moby Coll
+6:Env Coll, Moby Coll
+7:Darken, Env Coll, Moby Coll
+8:Hero Coll
+9:Darken, Hero Coll
+10:Env Coll, Hero Coll
+11:Darken, Env Coll, Hero Coll
+12:Moby Coll, Hero Coll
+13:Darken, Moby Coll, Hero Coll
+14:Env Coll, Moby Coll, Hero Coll
+15:Darken, Env Coll, Moby Coll, Hero Coll
+16:Bspheres
+17:Darken, Bspheres
+18:Env Coll, Bspheres
+19:Darken, Env Coll, Bspheres
+20:Moby Coll, Bspheres
+21:Darken, Moby Coll, Bspheres
+22:Env Coll, Moby Coll, Bspheres
+23:Darken, Env Coll, Moby Coll, Bspheres
+24:Hero Coll, Bspheres
+25:Darken, Hero Coll, Bspheres
+26:Env Coll, Hero Coll, Bspheres
+27:Darken, Env Coll, Hero Coll, Bspheres
+28:Moby Coll, Hero Coll, Bspheres
+29:Darken, Moby Coll, Hero Coll, Bspheres
+30:Env Coll, Moby Coll, Hero Coll, Bspheres
+31:Darken, Env Coll, Moby Coll, Hero Coll, Bspheres
+32:Cameras
+33:Darken, Cameras
+34:Env Coll, Cameras
+35:Darken, Env Coll, Cameras
+36:Moby Coll, Cameras
+37:Darken, Moby Coll, Cameras
+38:Env Coll, Moby Coll, Cameras
+39:Darken, Env Coll, Moby Coll, Cameras
+40:Hero Coll, Cameras
+41:Darken, Hero Coll, Cameras
+42:Env Coll, Hero Coll, Cameras
+43:Darken, Env Coll, Hero Coll, Cameras
+44:Moby Coll, Hero Coll, Cameras
+45:Darken, Moby Coll, Hero Coll, Cameras
+46:Env Coll, Moby Coll, Hero Coll, Cameras
+47:Darken, Env Coll, Moby Coll, Hero Coll, Cameras
+48:Bspheres, Cameras
+49:Darken, Bspheres, Cameras
+50:Env Coll, Bspheres, Cameras
+51:Darken, Env Coll, Bspheres, Cameras
+52:Moby Coll, Bspheres, Cameras
+53:Darken, Moby Coll, Bspheres, Cameras
+54:Env Coll, Moby Coll, Bspheres, Cameras
+55:Darken, Env Coll, Moby Coll, Bspheres, Cameras
+56:Hero Coll, Bspheres, Cameras
+57:Darken, Hero Coll, Bspheres, Cameras
+58:Env Coll, Hero Coll, Bspheres, Cameras
+59:Darken, Env Coll, Hero Coll, Bspheres, Cameras
+60:Moby Coll, Hero Coll, Bspheres, Cameras
+61:Darken, Moby Coll, Hero Coll, Bspheres, Cameras
+62:Env Coll, Moby Coll, Hero Coll, Bspheres, Cameras
+63:Darken, Env Coll, Moby Coll, Hero Coll, Bspheres, Cameras
+64:Samples
+65:Darken, Samples
+66:Env Coll, Samples
+67:Darken, Env Coll, Samples
+68:Moby Coll, Samples
+69:Darken, Moby Coll, Samples
+70:Env Coll, Moby Coll, Samples
+71:Darken, Env Coll, Moby Coll, Samples
+72:Hero Coll, Samples
+73:Darken, Hero Coll, Samples
+74:Env Coll, Hero Coll, Samples
+75:Darken, Env Coll, Hero Coll, Samples
+76:Moby Coll, Hero Coll, Samples
+77:Darken, Moby Coll, Hero Coll, Samples
+78:Env Coll, Moby Coll, Hero Coll, Samples
+79:Darken, Env Coll, Moby Coll, Hero Coll, Samples
+80:Bspheres, Samples
+81:Darken, Bspheres, Samples
+82:Env Coll, Bspheres, Samples
+83:Darken, Env Coll, Bspheres, Samples
+84:Moby Coll, Bspheres, Samples
+85:Darken, Moby Coll, Bspheres, Samples
+86:Env Coll, Moby Coll, Bspheres, Samples
+87:Darken, Env Coll, Moby Coll, Bspheres, Samples
+88:Hero Coll, Bspheres, Samples
+89:Darken, Hero Coll, Bspheres, Samples
+90:Env Coll, Hero Coll, Bspheres, Samples
+91:Darken, Env Coll, Hero Coll, Bspheres, Samples
+92:Moby Coll, Hero Coll, Bspheres, Samples
+93:Darken, Moby Coll, Hero Coll, Bspheres, Samples
+94:Env Coll, Moby Coll, Hero Coll, Bspheres, Samples
+95:Darken, Env Coll, Moby Coll, Hero Coll, Bspheres, Samples
+96:Cameras, Samples
+97:Darken, Cameras, Samples
+98:Env Coll, Cameras, Samples
+99:Darken, Env Coll, Cameras, Samples
+100:Moby Coll, Cameras, Samples
+101:Darken, Moby Coll, Cameras, Samples
+102:Env Coll, Moby Coll, Cameras, Samples
+103:Darken, Env Coll, Moby Coll, Cameras, Samples
+104:Hero Coll, Cameras, Samples
+105:Darken, Hero Coll, Cameras, Samples
+106:Env Coll, Hero Coll, Cameras, Samples
+107:Darken, Env Coll, Hero Coll, Cameras, Samples
+108:Moby Coll, Hero Coll, Cameras, Samples
+109:Darken, Moby Coll, Hero Coll, Cameras, Samples
+110:Env Coll, Moby Coll, Hero Coll, Cameras, Samples
+111:Darken, Env Coll, Moby Coll, Hero Coll, Cameras, Samples
+112:Bspheres, Cameras, Samples
+113:Darken, Bspheres, Cameras, Samples
+114:Env Coll, Bspheres, Cameras, Samples
+115:Darken, Env Coll, Bspheres, Cameras, Samples
+116:Moby Coll, Bspheres, Cameras, Samples
+117:Darken, Moby Coll, Bspheres, Cameras, Samples
+118:Env Coll, Moby Coll, Bspheres, Cameras, Samples
+119:Darken, Env Coll, Moby Coll, Bspheres, Cameras, Samples
+120:Hero Coll, Bspheres, Cameras, Samples
+121:Darken, Hero Coll, Bspheres, Cameras, Samples
+122:Env Coll, Hero Coll, Bspheres, Cameras, Samples
+123:Darken, Env Coll, Hero Coll, Bspheres, Cameras, Samples
+124:Moby Coll, Hero Coll, Bspheres, Cameras, Samples
+125:Darken, Moby Coll, Hero Coll, Bspheres, Cameras, Samples
+126:Env Coll, Moby Coll, Hero Coll, Bspheres, Cameras, Samples
+127:Darken, Env Coll, Moby Coll, Hero Coll, Bspheres, Cameras, Samples
+128:Text
+129:Darken, Text
+130:Env Coll, Text
+131:Darken, Env Coll, Text
+132:Moby Coll, Text
+133:Darken, Moby Coll, Text
+134:Env Coll, Moby Coll, Text
+135:Darken, Env Coll, Moby Coll, Text
+136:Hero Coll, Text
+137:Darken, Hero Coll, Text
+138:Env Coll, Hero Coll, Text
+139:Darken, Env Coll, Hero Coll, Text
+140:Moby Coll, Hero Coll, Text
+141:Darken, Moby Coll, Hero Coll, Text
+142:Env Coll, Moby Coll, Hero Coll, Text
+143:Darken, Env Coll, Moby Coll, Hero Coll, Text
+144:Bspheres, Text
+145:Darken, Bspheres, Text
+146:Env Coll, Bspheres, Text
+147:Darken, Env Coll, Bspheres, Text
+148:Moby Coll, Bspheres, Text
+149:Darken, Moby Coll, Bspheres, Text
+150:Env Coll, Moby Coll, Bspheres, Text
+151:Darken, Env Coll, Moby Coll, Bspheres, Text
+152:Hero Coll, Bspheres, Text
+153:Darken, Hero Coll, Bspheres, Text
+154:Env Coll, Hero Coll, Bspheres, Text
+155:Darken, Env Coll, Hero Coll, Bspheres, Text
+156:Moby Coll, Hero Coll, Bspheres, Text
+157:Darken, Moby Coll, Hero Coll, Bspheres, Text
+158:Env Coll, Moby Coll, Hero Coll, Bspheres, Text
+159:Darken, Env Coll, Moby Coll, Hero Coll, Bspheres, Text
+160:Cameras, Text
+161:Darken, Cameras, Text
+162:Env Coll, Cameras, Text
+163:Darken, Env Coll, Cameras, Text
+164:Moby Coll, Cameras, Text
+165:Darken, Moby Coll, Cameras, Text
+166:Env Coll, Moby Coll, Cameras, Text
+167:Darken, Env Coll, Moby Coll, Cameras, Text
+168:Hero Coll, Cameras, Text
+169:Darken, Hero Coll, Cameras, Text
+170:Env Coll, Hero Coll, Cameras, Text
+171:Darken, Env Coll, Hero Coll, Cameras, Text
+172:Moby Coll, Hero Coll, Cameras, Text
+173:Darken, Moby Coll, Hero Coll, Cameras, Text
+174:Env Coll, Moby Coll, Hero Coll, Cameras, Text
+175:Darken, Env Coll, Moby Coll, Hero Coll, Cameras, Text
+176:Bspheres, Cameras, Text
+177:Darken, Bspheres, Cameras, Text
+178:Env Coll, Bspheres, Cameras, Text
+179:Darken, Env Coll, Bspheres, Cameras, Text
+180:Moby Coll, Bspheres, Cameras, Text
+181:Darken, Moby Coll, Bspheres, Cameras, Text
+182:Env Coll, Moby Coll, Bspheres, Cameras, Text
+183:Darken, Env Coll, Moby Coll, Bspheres, Cameras, Text
+184:Hero Coll, Bspheres, Cameras, Text
+185:Darken, Hero Coll, Bspheres, Cameras, Text
+186:Env Coll, Hero Coll, Bspheres, Cameras, Text
+187:Darken, Env Coll, Hero Coll, Bspheres, Cameras, Text
+188:Moby Coll, Hero Coll, Bspheres, Cameras, Text
+189:Darken, Moby Coll, Hero Coll, Bspheres, Cameras, Text
+190:Env Coll, Moby Coll, Hero Coll, Bspheres, Cameras, Text
+191:Darken, Env Coll, Moby Coll, Hero Coll, Bspheres, Cameras, Text
+192:Samples, Text
+193:Darken, Samples, Text
+194:Env Coll, Samples, Text
+195:Darken, Env Coll, Samples, Text
+196:Moby Coll, Samples, Text
+197:Darken, Moby Coll, Samples, Text
+198:Env Coll, Moby Coll, Samples, Text
+199:Darken, Env Coll, Moby Coll, Samples, Text
+200:Hero Coll, Samples, Text
+201:Darken, Hero Coll, Samples, Text
+202:Env Coll, Hero Coll, Samples, Text
+203:Darken, Env Coll, Hero Coll, Samples, Text
+204:Moby Coll, Hero Coll, Samples, Text
+205:Darken, Moby Coll, Hero Coll, Samples, Text
+206:Env Coll, Moby Coll, Hero Coll, Samples, Text
+207:Darken, Env Coll, Moby Coll, Hero Coll, Samples, Text
+208:Bspheres, Samples, Text
+209:Darken, Bspheres, Samples, Text
+210:Env Coll, Bspheres, Samples, Text
+211:Darken, Env Coll, Bspheres, Samples, Text
+212:Moby Coll, Bspheres, Samples, Text
+213:Darken, Moby Coll, Bspheres, Samples, Text
+214:Env Coll, Moby Coll, Bspheres, Samples, Text
+215:Darken, Env Coll, Moby Coll, Bspheres, Samples, Text
+216:Hero Coll, Bspheres, Samples, Text
+217:Darken, Hero Coll, Bspheres, Samples, Text
+218:Env Coll, Hero Coll, Bspheres, Samples, Text
+219:Darken, Env Coll, Hero Coll, Bspheres, Samples, Text
+220:Moby Coll, Hero Coll, Bspheres, Samples, Text
+221:Darken, Moby Coll, Hero Coll, Bspheres, Samples, Text
+222:Env Coll, Moby Coll, Hero Coll, Bspheres, Samples, Text
+223:Darken, Env Coll, Moby Coll, Hero Coll, Bspheres, Samples, Text
+224:Cameras, Samples, Text
+225:Darken, Cameras, Samples, Text
+226:Env Coll, Cameras, Samples, Text
+227:Darken, Env Coll, Cameras, Samples, Text
+228:Moby Coll, Cameras, Samples, Text
+229:Darken, Moby Coll, Cameras, Samples, Text
+230:Env Coll, Moby Coll, Cameras, Samples, Text
+231:Darken, Env Coll, Moby Coll, Cameras, Samples, Text
+232:Hero Coll, Cameras, Samples, Text
+233:Darken, Hero Coll, Cameras, Samples, Text
+234:Env Coll, Hero Coll, Cameras, Samples, Text
+235:Darken, Env Coll, Hero Coll, Cameras, Samples, Text
+236:Moby Coll, Hero Coll, Cameras, Samples, Text
+237:Darken, Moby Coll, Hero Coll, Cameras, Samples, Text
+238:Env Coll, Moby Coll, Hero Coll, Cameras, Samples, Text
+239:Darken, Env Coll, Moby Coll, Hero Coll, Cameras, Samples, Text
+240:Bspheres, Cameras, Samples, Text
+241:Darken, Bspheres, Cameras, Samples, Text
+242:Env Coll, Bspheres, Cameras, Samples, Text
+243:Darken, Env Coll, Bspheres, Cameras, Samples, Text
+244:Moby Coll, Bspheres, Cameras, Samples, Text
+245:Darken, Moby Coll, Bspheres, Cameras, Samples, Text
+246:Env Coll, Moby Coll, Bspheres, Cameras, Samples, Text
+247:Darken, Env Coll, Moby Coll, Bspheres, Cameras, Samples, Text
+248:Hero Coll, Bspheres, Cameras, Samples, Text
+249:Darken, Hero Coll, Bspheres, Cameras, Samples, Text
+250:Env Coll, Hero Coll, Bspheres, Cameras, Samples, Text
+251:Darken, Env Coll, Hero Coll, Bspheres, Cameras, Samples, Text
+252:Moby Coll, Hero Coll, Bspheres, Cameras, Samples, Text
+253:Darken, Moby Coll, Hero Coll, Bspheres, Cameras, Samples, Text
+254:Env Coll, Moby Coll, Hero Coll, Bspheres, Cameras, Samples, Text
+255:Darken, Env Coll, Moby Coll, Hero Coll, Bspheres, Cameras, Samples, Text
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+00</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>121</ID>
+          <Description>"UPDATE State"</Description>
+          <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:None
+1:Ratchett
+2:Mobys
+3:Ratchett, Mobys
+4:Parts
+5:Ratchett, Parts
+6:Mobys, Parts
+7:Ratchett, Mobys, Parts
+8:Camera
+9:Ratchett, Camera
+10:Mobys, Camera
+11:Ratchett, Mobys, Camera
+12:Parts, Camera
+13:Ratchett, Parts, Camera
+14:Mobys, Parts, Camera
+15:Ratchett, Mobys, Parts, Camera
+16:Step
+17:Ratchett, Step
+18:Mobys, Step
+19:Ratchett, Mobys, Step
+20:Parts, Step
+21:Ratchett, Parts, Step
+22:Mobys, Parts, Step
+23:Ratchett, Mobys, Parts, Step
+24:Camera, Step
+25:Ratchett, Camera, Step
+26:Mobys, Camera, Step
+27:Ratchett, Mobys, Camera, Step
+28:Parts, Camera, Step
+29:Ratchett, Parts, Camera, Step
+30:Mobys, Parts, Camera, Step
+31:Ratchett, Mobys, Parts, Camera, Step
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+04</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>124</ID>
+          <Description>"MODE &gt; Control State"</Description>
+          <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Normal
+1:Camera
+2:Cam+Chr
+3:Volume
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+10</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>129</ID>
+          <Description>"MODE &gt; Profile"</Description>
+          <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:Bars
+2:Render
+3:Mobys
+4:Ties
+5:Shrubs
+6:Occlusion
+7:CPU / GPU
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+14</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>130</ID>
+          <Description>"MODE &gt; Occl State"</Description>
+          <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:Freeze
+2:Active
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+18</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>131</ID>
+          <Description>"MODE &gt; Magnetic"</Description>
+          <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+2:Sphere
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+1C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>132</ID>
+          <Description>"MODE &gt; Invinc Toggle"</Description>
+          <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+20</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>133</ID>
+          <Description>"MODE &gt; Drawdist Toggle"</Description>
+          <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Normal
+1:Near
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+24</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>134</ID>
+          <Description>"MODE &gt; Coll State"</Description>
+          <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Hotspt
+1:Camera
+2:Sound
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+28</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>135</ID>
+          <Description>"MODE &gt; Tv Mode State"</Description>
+          <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:NTSC
+1:PAL
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+2C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>136</ID>
+          <Description>"MODE &gt; Screen State"</Description>
+          <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Normal
+1:Small
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+30</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>137</ID>
+          <Description>"MODE &gt; Scene State"</Description>
+          <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">4294967295:None
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+34</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>138</ID>
+          <Description>"MODE &gt; Segment Selected Index"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+38</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>119</ID>
+          <Description>"MISC &gt; BattleCam Toggle"</Description>
+          <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:On
+1:Off
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+E8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>122</ID>
+          <Description>"Debug Menu &gt; Selected Category Index"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+08</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>123</ID>
+          <Description>"Debug Menu &gt; Selected Menu Index"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+0C</Address>
+        </CheatEntry>
+      </CheatEntries>
     </CheatEntry>
   </CheatEntries>
   <UserdefinedSymbols/>
