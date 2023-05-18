@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="42">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>38</ID>
+      <Description>"Current Frame Rate"</Description>
+      <VariableType>Float</VariableType>
+      <Address>2C297CF4</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

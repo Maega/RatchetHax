@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="42">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>41</ID>
+      <Description>"Weapon Ammo (Working but not fully tested)"</Description>
+      <Options moRecursiveSetValue="1" moManualExpandCollapse="1" moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>35</ID>
+          <Description>"Lancer Ammo"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>201392F0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>36</ID>
+          <Description>"Gravity Bomb Ammo"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>20139320</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>43</ID>
+          <Description>"Chopper Ammo"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>201392D0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>44</ID>
+          <Description>"Seeker Gun Ammo"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>201392D8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>45</ID>
+          <Description>"Pulse Rifle Ammo"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>201392D4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>55</ID>
+          <Description>"Miniturret Glove Ammo"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>2013931C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>56</ID>
+          <Description>"Blitz Gun Ammo"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>201392E0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>57</ID>
+          <Description>"Synthenoid Ammo"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>201392F4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>49</ID>
+          <Description>"Lava Gun Ammo"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>201392EC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>51</ID>
+          <Description>"Bouncer Ammo"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>2013930C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>47</ID>
+          <Description>"Minirocket Tube Ammo"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>201392E4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>48</ID>
+          <Description>"Plasma Coil Ammo"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>201392E8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>46</ID>
+          <Description>"Hoverbomb Gun Ammo"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>201392DC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>50</ID>
+          <Description>"Spiderbot Glove Ammo"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>201392F8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>54</ID>
+          <Description>"Bomb Glove Ammo"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>201392A8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>53</ID>
+          <Description>"Visibomb Gun Ammo"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>201392B0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>52</ID>
+          <Description>"Decoy Glove Ammo"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>201392BC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>42</ID>
+          <Description>"Tesla Claw Ammo"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>201392C0</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>58</ID>
+      <Description>"Main Menu Selected Index"</Description>
+      <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Weapons
+1:Gadgets
+2:Quick Select
+3:Items
+4:Help
+5:Options
+</DropDownList>
+      <VariableType>Byte</VariableType>
+      <Address>21FE9F90</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>27</ID>
+      <Description>"-- Weapon Unlocks --"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <GroupHeader>1</GroupHeader>
+      <Address>201394D1</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>23</ID>
+          <Description>"Clank Zapper"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+00</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>24</ID>
+          <Description>"Bomb Glove"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+03</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>25</ID>
+          <Description>"Visibomb Gun"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+05</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>20</ID>
+          <Description>"Sheepinator"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+07</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>21</ID>
+          <Description>"Decoy Glove"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+08</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>22</ID>
+          <Description>"Tesla Claw"</Description>
+          <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Locked
+1:Unlocked
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+09</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>16</ID>
+          <Description>"Chopper"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+0D</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>15</ID>
+          <Description>"Pulse Rifle"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+0E</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>14</ID>
+          <Description>"Seeker Gun"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+0F</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>13</ID>
+          <Description>"Hoverbomb Gun"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+10</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>12</ID>
+          <Description>"Blitz Gun"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+11</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>11</ID>
+          <Description>"Minirocket Tube"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+12</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>10</ID>
+          <Description>"Plasma Coil"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+13</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>34</ID>
+          <Description>"Lava Gun"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+14</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>33</ID>
+          <Description>"Lancer"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+15</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>17</ID>
+          <Description>"Synthenoid"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+16</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>18</ID>
+          <Description>"Spiderbot Glove"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+17</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>19</ID>
+          <Description>"Bouncer"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+1C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>28</ID>
+          <Description>"Miniturret Glove"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+20</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>29</ID>
+          <Description>"Gravity Bomb"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+21</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>30</ID>
+          <Description>"Zodiac"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+22</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>31</ID>
+          <Description>"RYNO II"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+23</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>32</ID>
+          <Description>"Shield Charger"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+24</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26</ID>
+          <Description>"Walloper"</Description>
+          <DropDownListLink>Tesla Claw</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+2C</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>38</ID>
+      <Description>"-- Gadget Unlocks --"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <GroupHeader>1</GroupHeader>
+      <Address>201394CA</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>39</ID>
+          <Description>"Heli-Pack"</Description>
+          <DropDownListLink>Charge Boots</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+00</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>40</ID>
+          <Description>"Thruster-Pack"</Description>
+          <DropDownListLink>Charge Boots</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+01</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>59</ID>
+          <Description>"Swingshot"</Description>
+          <DropDownListLink>Charge Boots</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+0B</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>60</ID>
+          <Description>"Gravity Boots"</Description>
+          <DropDownListLink>Charge Boots</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+11</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>61</ID>
+          <Description>"Grindboots"</Description>
+          <DropDownListLink>Charge Boots</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+12</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>62</ID>
+          <Description>"Dynamo"</Description>
+          <DropDownListLink>Charge Boots</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+22</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>63</ID>
+          <Description>"Thermanator"</Description>
+          <DropDownListLink>Charge Boots</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+25</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>37</ID>
+          <Description>"Tractor Beam"</Description>
+          <DropDownListLink>Charge Boots</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+2C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>64</ID>
+          <Description>"Charge Boots"</Description>
+          <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Locked
+1:Unlocked
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+34</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>65</ID>
+          <Description>"Hypnomatic"</Description>
+          <DropDownListLink>Charge Boots</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+35</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>66</ID>
+      <Description>"-- Item Unlocks --"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <GroupHeader>1</GroupHeader>
+      <Address>201394CC</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>67</ID>
+          <Description>"Hydro-Pack"</Description>
+          <DropDownListLink>Glider</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+00</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>68</ID>
+          <Description>"Mapper"</Description>
+          <DropDownListLink>Glider</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+01</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>69</ID>
+          <Description>"Commando Suit"</Description>
+          <DropDownListLink>Glider</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+02</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>70</ID>
+          <Description>"Armor Magnetizer"</Description>
+          <DropDownListLink>Glider</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+03</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>71</ID>
+          <Description>"Levitator"</Description>
+          <DropDownListLink>Glider</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+04</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>72</ID>
+          <Description>"Glider"</Description>
+          <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Locked
+1:Unlocked
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+11</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>73</ID>
+          <Description>"Electrolyzer"</Description>
+          <DropDownListLink>Glider</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+22</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>74</ID>
+          <Description>"Megacorp Helmet"</Description>
+          <DropDownListLink>Glider</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+2B</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>75</ID>
+          <Description>"Biker Helmet"</Description>
+          <DropDownListLink>Glider</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+2C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>76</ID>
+          <Description>"Box Breaker"</Description>
+          <DropDownListLink>Glider</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+2E</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>77</ID>
+          <Description>"Infiltrator"</Description>
+          <DropDownListLink>Glider</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>+2F</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>201</ID>
+      <Description>"-- Galactic Map --"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <GroupHeader>1</GroupHeader>
+      <Address>20139618</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>219</ID>
+          <Description>"! Unlock All Planets"</Description>
+          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">18 00 00 00 01 00 00 00 02 00 00 00 03 00 00 00 04 00 00 00 05 00 00 00 06 00 00 00 07 00 00 00 08 00 00 00 09 00 00 00 0A 00 00 00 0B 00 00 00 0C 00 00 00 0D 00 00 00 0E 00 00 00 0F 00 00 00 10 00 00 00 11 00 00 00 12 00 00 00 13 00 00 00 14 00 00 00:All Planets Unlocked
+*:Some Planets Unlocked
+</DropDownList>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Array of byte</VariableType>
+          <ByteLength>84</ByteLength>
+          <Address>+00</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>183</ID>
+          <Description>"Slot 1"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+00</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>202</ID>
+          <Description>"Slot 2"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>203</ID>
+          <Description>"Slot 3"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>204</ID>
+          <Description>"Slot 4"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>205</ID>
+          <Description>"Slot 5"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+10</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>206</ID>
+          <Description>"Slot 6"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+14</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>207</ID>
+          <Description>"Slot 7"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+18</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>208</ID>
+          <Description>"Slot 8"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+1C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>209</ID>
+          <Description>"Slot 9"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+20</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>210</ID>
+          <Description>"Slot 10"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+24</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>211</ID>
+          <Description>"Slot 11"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+28</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>212</ID>
+          <Description>"Slot 12"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+2C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>213</ID>
+          <Description>"Slot 13"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+30</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>214</ID>
+          <Description>"Slot 14"</Description>
+          <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Locked
+1:Oozla
+2:Maktar Nebula
+3:Endako
+4:Barlow
+5:Feltzin System
+6:Notak
+7:Siberius
+8:Tabora
+9:Dobbo
+10:Hrugis Cloud
+11:Joba
+12:Todano
+13:Boldan
+14:Aranos
+15:Gorn
+16:Snivelak
+17:Smolg
+18:Damosel
+19:Grelbin
+20:Yeedil
+21:Insomniac Museum
+22:Dobbo Orbit (Moon)
+23:Damosel Orbit (Moon)
+24:Ship Shack
+25:Wupash Nebula
+26:Jamming Array (Maktar Nebula)
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+34</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>215</ID>
+          <Description>"Slot 15"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+38</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>216</ID>
+          <Description>"Slot 16"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+3C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>217</ID>
+          <Description>"Slot 17"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+40</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>218</ID>
+          <Description>"Slot 18"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+44</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>220</ID>
+          <Description>"Slot 19"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+48</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>221</ID>
+          <Description>"Slot 20"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+4C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>253</ID>
+          <Description>"Slot 21"</Description>
+          <DropDownListLink>Slot 14</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+50</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>254</ID>
+      <Description>"Mission Screen - Current Preview Image (Valid on Orxon)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>20249D18</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>255</ID>
+      <Description>"Mission Screen - Current Description [Message ID] (Valid on Orxon)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>20249E04</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>256</ID>
+      <Description>"Items Menu - Current Description [Message ID] (Valid on Orxon)"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>2024C3BC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>257</ID>
+      <Description>"Maktar Ship Fight - Ships Remaining"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>201F38E0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>259</ID>
+      <Description>"Current Menu Screen Type"</Description>
+      <DropDownList DisplayValueAsItem="1">0:In-Game
+1:Pause Menu
+2:Local Map
+4:Galactic Map
+5:New Challenge Mode Game
+6:Title / Main Menu
+7:Quick Select
+8:Level Select
+</DropDownList>
+      <VariableType>4 Bytes</VariableType>
+      <Address>201A95EC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>260</ID>
+      <Description>"Game Mode"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>201A87B8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>261</ID>
+      <Description>"Raritanium"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>2013916C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>263</ID>
+      <Description>"-- Settings --"</Description>
+      <GroupHeader>1</GroupHeader>
+      <Address>0</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>265</ID>
+          <Description>"Widescreen"</Description>
+          <DropDownListLink>Camera Up/Down Movement</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>20139E39</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>262</ID>
+          <Description>"Vibration"</Description>
+          <DropDownListLink>Camera Up/Down Movement</DropDownListLink>
+          <VariableType>Byte</VariableType>
+          <Address>20139E3A</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>264</ID>
+          <Description>"Quick Select Pause"</Description>
+          <DropDownListLink>Camera Up/Down Movement</DropDownListLink>
+          <VariableType>Byte</VariableType>
+          <Address>20139E3B</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>266</ID>
+          <Description>"Camera Up/Down Movement"</Description>
+          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Disabled
+1:Enabled
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>20139E2C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>267</ID>
+          <Description>"Camera Left/Right Movement"</Description>
+          <DropDownListLink>Camera Up/Down Movement</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>20139E30</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>269</ID>
+          <Description>"Stereo/Mono Sound"</Description>
+          <DropDownListLink>Camera Up/Down Movement</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>20139E20</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>268</ID>
+          <Description>"Music Volume (0-1024)"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>20139E24</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>276</ID>
+          <Description>"Music Volume [Actual]"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>2018951C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>270</ID>
+          <Description>"Sound FX Volume (0-1024)"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>20139E28</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>273</ID>
+          <Description>"Sound FX Volume [Actual]"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>20189518</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>271</ID>
+          <Description>"Language"</Description>
+          <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:English
+2:French
+3:German
+4:Spanish
+5:Italian
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>20139E3C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>277</ID>
+          <Description>"Subtitles (?? Maybe, test me)"</Description>
+          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Disabled
+1:Enabled
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>20139E1E</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>278</ID>
+          <Description>"Changes Vertical Size (?? Unknown, Maybe PAL/NTSC Mode)"</Description>
+          <DropDownListLink>Subtitles (?? Maybe, test me)</DropDownListLink>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>20139E1B</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>280</ID>
+      <Description>"X Coordinate"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Float</VariableType>
+      <Address>2018AD10</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>281</ID>
+      <Description>"Y Coordinate"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Float</VariableType>
+      <Address>2018AD14</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>279</ID>
+      <Description>"Z Coordinate"</Description>
+      <VariableType>Float</VariableType>
+      <Address>2018AD18</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
