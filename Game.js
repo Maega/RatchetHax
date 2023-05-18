@@ -44,7 +44,7 @@ export default class Game {
         memoryjs.writeMemory(this.process, this.address.current.item, equippedItem.id, memoryjs.UINT8);
     }
 
-    get planet() {
+    get currentPlanet() {
         const planetId = memoryjs.readMemory(this.process, this.address.current.planet, memoryjs.UINT8);
         const planet = Object.values(this.address.planets).find(planet => planet.id === planetId);
         return planet;
