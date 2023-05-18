@@ -1,5 +1,11 @@
 # RatchetHax
 
+A Node.js-based memory editor and trainer for the Ratchet & Clank PS2 series.
+
+RatchetHax can be used standalone via the `sample.js` interactive sample code to do various trainer-ish tasks like give yourself bolts, weapons etc. and show the debug menu (in RC1).
+
+It can also be used in your own project to write scripts and game mods with JavaScript by importing `Game.js` into your project and using the [API](#-api-examples) documented below.
+
 ## Requirements
 
 * Node.js
@@ -9,7 +15,7 @@
 
 ## Quick Start
 
-*This is intended as a quick guide to get started for beginners on Windows who aren't familiar with Node.js or the command line.*
+*This section is intended as a quick guide to get started for beginners on Windows who aren't familiar with Node.js or the command line.*
 
 1. Install [Node.js](https://nodejs.org/en) if it's not already installed
 2. [Download](https://github.com/ParadoxEpoch/RatchetHax/archive/refs/heads/main.zip) the RatchetHax project code
