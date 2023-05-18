@@ -4,7 +4,7 @@ A Node.js-based memory editor and trainer for the Ratchet & Clank PS2 series.
 
 RatchetHax can be used standalone via the `sample.js` interactive sample code to do various trainer-ish tasks like give yourself bolts, weapons etc. and show the debug menu (in RC1).
 
-It can also be used in your own project to write scripts and game mods with JavaScript by importing `Game.js` into your project and using the [API](#-api-examples) documented below.
+It can also be used in your own project to write scripts and game mods with JavaScript by importing `Game.js` into your project and using the [API](#api-examples) documented below.
 
 ## Requirements
 
@@ -291,7 +291,7 @@ Currently, only the original v1.00 (Black Label) NTSC version of Ratchet & Clank
 
 Adding support for other Ratchet & Clank games is as simple as cloning the [rc1_ntsc_v1.js](addresses/rc1_ntsc_v1.js) file, making the neccessary address edits and then including a reference to the new file in [Game.js](Game.js).
 
-I'm working on adding support for new builds as time permits. If you'd like to contribute your own, feel free to open an issue or submit a PR. See the *[Contributing](#-contributing)* section for more info.
+I'm working on adding support for new builds as time permits. If you'd like to contribute your own, feel free to open an issue or submit a PR. See the *[Contributing](#contributing)* section for more info.
 
 When instantiating the Game class, you'll need to pass a game version string parameter. Below is a table of supported games and their version strings:
 
