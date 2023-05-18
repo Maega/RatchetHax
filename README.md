@@ -1,78 +1,120 @@
-# RatchetHax
+# RatchetHax - nodemem
 
-Cheat Engine tables for the Ratchet & Clank Series, including several known prototype builds. Useful for cheating, speedrunning, modding, reverse engineering and everything in between.
+## Objects
 
-Compatible with PCSX2 1.6.0, your mileage may vary on other versions.
+### Weapon Object
 
-**:construction: Cheat tables are currently a work-in-progress and may be unfinished, have missing sections or incorrect addresses :construction:**
+``javascript
+{
+    id: 10,
+    name: 'Bomb Glove',
+    unlocked: true,
+    gold: true,
+    ammo: 40,
+    equipped: true
+}
+``
 
-These cheat tables are intended to be friendly for beginners, all listed addresses have dropdown menus to select supported values.
+'''Static Props'''
 
-Issues and Pull Requests are welcome :thumbsup:
- 
-## :information_source: Features
+* `id` - The weapon's internal ID
+* `name` - The name of the weapon
 
-This is an incomplete list of the values that are present throughout the various cheat tables.
+'''Getter/Setter Props'''
 
-* **Nanotech**
-* **Bolts**
-* **Gold Bolts**
-* **Game Mode:** Associated with the overall game state and can be used to access the Debug Menu in all builds of _Ratchet & Clank (2002)_
-* **Loaded Planet:** One of several values that stores the ID for the currently loaded planet
-* **Player State**
-  * **Animation State:** Ratchet's current state (standing, jumping, etc..)
-  * **X Coordinate**
-  * **Y Coordinate**
-  * **Z Coordinate**
-  * **X Tilt**
-  * **Y Tilt**
-  * **Heading:** The direction Ratchet is facing. Valid range is -Pi to +Pi
-* **Currently Equipped Items**
-  * **Equipped Weapon**
-  * **Equipped Backpack**
-  * **Equipped Headwear**
-  * **Equipped Footwear**
-* **Weapon Unlocks:** Unlock any weapon in the game
-* **Gold Weapon Unlocks:** Upgrade any weapon to the gold variant
-* **Gadget Unlocks:** Unlock any gadget in the game
-* **Item Unlocks:** Unlock any item in the game
-* **Galactic Map:** Unlock all planets immediately, or selectively assign planets to each slot in the Galactic Map
-* **Weapon Ammo:** Set and freeze ammo for any weapon in the game
-* **Debug Mode Button Sequence:** Counts the number of correct sequential button presses to enable debug mode / "cheats enabled" mode
-* **Debug / Cheats Enabled Mode:** Toggle debug mode in non-retail builds of the game
-* **Debug Functions:** Manually trigger functionality that is normally accessibly from the game's debug menu
-  * **DRAW State:** Various options to draw debug information on-screen _(most of these options don't work without a devkit)_
-  * **UPDATE State**
-  * **MODE \> Control State**
-  * **MODE \> Profile**
-  * **MODE \> Bookmark Toggle**
-  * **MODE \> Invincibility Toggle**
-  * **MODE \> Draw Distance Toggle**
-  * **MODE \> Collision State**
-  * **MODE \> TV Mode State**
-  * **MODE \> Screen State**
-  * **MODE \> Scene State**
-  * **MODE \> Segment Selected Index**
-  * **MISC \> BattleCam Toggle**
-  * **MISC \> Actuator Toggle**
-  * **Debug Menu \> Selected Category Index**
-  * **Debug Menu \> Selected Menu Index**
-  * **WidgetText Debug Display:** For _Ratchet & Clank: UYA_ only
-  * **Test Draw Debug Display:** For _Ratchet & Clank: UYA_ only
-  * **Character Map:** For _Ratchet & Clank: UYA_ only
-  * **Toggle Console Logging:** For _Ratchet & Clank: UYA_ only
-  * **IGE Debug:** For _Ratchet & Clank: UYA_ only
- * **Gadgetron Vendor**
-   * **Selected Item Index**
-   * **Ammo/Weapon Buy Modal State**
-   * **Ammo Purchase QTY**
-   * **Current Marquee Text**
- * **Ratchet Speed & Momentum**
-   * **X Jump Momentum**
-   * **Y Jump Momentum**
-   * **Jump Acceleration**
-   * **Distance to Ground**
-   * **Max momentum to store by running**
-   * **Global Stored Momentum**
- * **Camera Rotation Speed**
- * **Current Controller Button Pressed (Joker Address)**
+* `unlocked` - Whether or not the weapon is unlocked
+* `gold` - Whether or not the weapon is gold
+* `ammo` - The amount of ammo the weapon has
+* `equipped` - Whether or not the weapon is equipped
+
+### Gadget Object
+
+``javascript
+{
+    id: 12,
+    name: 'Swingshot',
+    unlocked: true,
+    equipped: true
+}
+``
+
+'''Static Props'''
+
+* `id` - The gadget's internal ID
+* `name` - The name of the gadget
+
+'''Getter/Setter Props'''
+
+* `unlocked` - Whether or not the gadget is unlocked
+* `equipped` - Whether or not the gadget is equipped
+
+### Item Object
+
+``javascript
+{
+    id: 1,
+    name: 'Hoverboard',
+    unlocked: true
+}
+``
+
+'''Static Props'''
+
+* `id` - The item's internal ID
+* `name` - The name of the item
+
+'''Getter/Setter Props'''
+
+* `unlocked` - Whether or not the item is unlocked
+
+### Planet Object
+
+``javascript
+{
+    id: 3,
+    name: 'Kerwan'
+}
+``
+
+'''Static Props'''
+
+* `id` - The planet's internal ID
+* `name` - The name of the planet
+
+## API Examples
+
+``javascript
+// Get a weapon object
+game.weapons('bombglove');
+
+// Get a gadget object
+game.gadgets('swingshot');
+
+// Get an item object
+game.items('hoverboard');
+
+// Get or set weapon/gadget/item properties
+game.weapons('bombglove').unlocked = true;
+game.weapons('bombglove').gold = true;
+game.weapons('bombglove').ammo = 40;
+
+// Get or set nanotech
+game.nanotech = 4;
+
+// Get or set bolts
+game.bolts = 10000;
+
+// Get equipped weapon/gadget object
+game.equipped;
+
+// Check if a weapon/gadget is equipped
+game.weapons('bombglove').equipped;
+
+// Equip a weapon/gadget
+game.equipped = 'bombglove';
+// or...
+game.weapons('bombglove').equipped = true;
+
+// Edit a property of the equipped weapon/gadget
+game.equipped.ammo = 40;
+``
