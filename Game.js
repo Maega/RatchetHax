@@ -10,7 +10,11 @@ for (const file of gameFiles) {
 }
 
 export default class Game {
-    constructor(pid, gameVer = 'rc1_ntsc_v1') {
+    constructor(pid, gameVer) {
+
+        // Check for valid game version
+        if (!games[gameVer]) throw new Error(`${gameVer} is not a supported game version`);
+
         // Open the process and get the handle & game addresses
         this.processObject = memoryjs.openProcess(pid);
         this.process = this.processObject.handle;
