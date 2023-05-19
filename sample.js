@@ -32,6 +32,18 @@ async function makeAllWeaponsGold() {
     }
 }
 
+async function unlockAllGadgets() {
+    for (const gadgetId in game.address.gadgets) {
+        game.gadgets(gadgetId).unlocked = true;
+    }
+}
+
+async function unlockAllItems() {
+    for (const itemId in game.address.items) {
+        game.items(itemId).unlocked = true;
+    }
+}
+
 async function setNanotech() {
     const answer = await inquirer.prompt([{
         type: 'number',
@@ -132,6 +144,10 @@ async function main() {
             { name: 'Unlock All Weapons', value: unlockAllWeapons },
             { name: 'Make All Weapons Gold', value: makeAllWeaponsGold },
             { name: 'Set Current Weapon Ammo', value: setCurrentWeaponAmmo },
+            new inquirer.Separator('───── Gadgets ─────'),
+            { name: 'Unlock All Gadgets', value: unlockAllGadgets },
+            new inquirer.Separator('────── Items ─────'),
+            { name: 'Unlock All Items', value: unlockAllItems },
             new inquirer.Separator('──── Position ─────'),
             { name: 'Set Player Position', value: setPos },
             new inquirer.Separator('──── Debugging ────'),
