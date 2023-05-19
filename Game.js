@@ -1,4 +1,5 @@
 import memoryjs from 'memoryjs';
+import fs from 'fs';
 
 // Dynamically import game address files from the games directory
 const games = {};
@@ -14,6 +15,18 @@ export default class Game {
         this.processObject = memoryjs.openProcess(pid);
         this.process = this.processObject.handle;
         this.address = games[gameVer];
+
+        // Replace data types with big endian versions if specified
+        if (this.address.bigEndian) {
+            memoryjs.INT16 = memoryjs.INT16_BE;
+            memoryjs.UINT16 = memoryjs.UINT16_BE;
+            memoryjs.INT32 = memoryjs.INT32_BE;
+            memoryjs.UINT32 = memoryjs.UINT32_BE;
+            memoryjs.INT64 = memoryjs.INT64_BE;
+            memoryjs.UINT64 = memoryjs.UINT64_BE;
+            memoryjs.FLOAT = memoryjs.FLOAT_BE;
+            memoryjs.DOUBLE = memoryjs.DOUBLE_BE;
+        };
     }
 
     get nanotech() {
@@ -58,7 +71,7 @@ export default class Game {
         const unlockedPlanetsBuf = memoryjs.readBuffer(this.process, this.address.galacticMapBase, 72);
         const planetIds = [];
         const view = new DataView(unlockedPlanetsBuf.buffer);
-        for (let i = 0; i < 18; i++) planetIds.push(view.getUint32(i * 4, true));
+        for (let i = 0; i < 18; i++) planetIds.push(view.getUint32(i * 4, true)); // For some reason, even on PS3 this is little endian.
         return planetIds;
     }
 
@@ -82,45 +95,45 @@ export default class Game {
         const view = new DataView(posBuf.buffer);
         return {
             get x() {
-                return view.getFloat32(0, true);
+                return view.getFloat32(0, !self.address.bigEndian);
             },
             set x(value) {
-                view.setFloat32(0, value, true);
+                view.setFloat32(0, value, !self.address.bigEndian);
                 memoryjs.writeBuffer(self.process, self.address.posBase, posBuf);
             },
             get y() {
-                return view.getFloat32(4, true);
+                return view.getFloat32(4, !self.address.bigEndian);
             },
             set y(value) {
-                view.setFloat32(4, value, true);
+                view.setFloat32(4, value, !self.address.bigEndian);
                 memoryjs.writeBuffer(self.process, self.address.posBase, posBuf);
             },
             get z() {
-                return view.getFloat32(8, true);
+                return view.getFloat32(8, !self.address.bigEndian);
             },
             set z(value) {
-                view.setFloat32(8, value, true);
+                view.setFloat32(8, value, !self.address.bigEndian);
                 memoryjs.writeBuffer(self.process, self.address.posBase, posBuf);
             },
             get pitch() {
-                return view.getFloat32(16, true);
+                return view.getFloat32(16, !self.address.bigEndian);
             },
             set pitch(value) {
-                view.setFloat32(16, value, true);
+                view.setFloat32(16, value, !self.address.bigEndian);
                 memoryjs.writeBuffer(self.process, self.address.posBase, posBuf);
             },
             get roll() {
-                return view.getFloat32(20, true);
+                return view.getFloat32(20, !self.address.bigEndian);
             },
             set roll(value) {
-                view.setFloat32(20, value, true);
+                view.setFloat32(20, value, !self.address.bigEndian);
                 memoryjs.writeBuffer(self.process, self.address.posBase, posBuf);
             },
             get yaw() {
-                return view.getFloat32(24, true);
+                return view.getFloat32(24, !self.address.bigEndian);
             },
             set yaw(value) {
-                view.setFloat32(24, value, true);
+                view.setFloat32(24, value, !self.address.bigEndian);
                 memoryjs.writeBuffer(self.process, self.address.posBase, posBuf);
             }
         }
@@ -128,12 +141,12 @@ export default class Game {
     set playerPos(value) {
         const posBuf = memoryjs.readBuffer(this.process, this.address.posBase, 28);
         const view = new DataView(posBuf.buffer);
-        if (value.x) view.setFloat32(0, value.x, true);
-        if (value.y) view.setFloat32(4, value.y, true);
-        if (value.z) view.setFloat32(8, value.z, true);
-        if (value.pitch) view.setFloat32(16, value.pitch, true);
-        if (value.roll) view.setFloat32(20, value.roll, true);
-        if (value.yaw) view.setFloat32(24, value.yaw, true);
+        if (value.x) view.setFloat32(0, value.x, !this.address.bigEndian);
+        if (value.y) view.setFloat32(4, value.y, !this.address.bigEndian);
+        if (value.z) view.setFloat32(8, value.z, !this.address.bigEndian);
+        if (value.pitch) view.setFloat32(16, value.pitch, !this.address.bigEndian);
+        if (value.roll) view.setFloat32(20, value.roll, !this.address.bigEndian);
+        if (value.yaw) view.setFloat32(24, value.yaw, !this.address.bigEndian);
         memoryjs.writeBuffer(this.process, this.address.posBase, posBuf);
     }
 
