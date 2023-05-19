@@ -1,9 +1,29 @@
 import inquirer from 'inquirer';
 import Game from './Game.js';
+import memoryjs from 'memoryjs';
+
+const filteredProcesses = memoryjs.getProcesses().filter(p => p.szExeFile === 'pcsx2.exe' || p.szExeFile.startsWith('pcsx2-') || p.szExeFile === 'rpcs3.exe');
+const processChoices = filteredProcesses.map(p => {
+    let appName;
+    if (p.szExeFile.startsWith('pcsx2')) appName = 'PCSX2 Emulator';
+    else if (p.szExeFile.startsWith('rpcs3')) appName = 'RPCS3 Emulator';
+    return {
+        name: appName + ' - ' + p.szExeFile + ' (' + p.th32ProcessID + ')',
+        value: p.th32ProcessID
+    }
+});
+processChoices.push({ name: 'Choose a different process...', value: null })
 
 console.clear();
 
-const setup = await inquirer.prompt([{
+const targetProcess = processChoices.length > 1 ? await inquirer.prompt({
+    type: 'list',
+    name: 'id',
+    message: 'Found the following running processes. Which one do you want to connect to?',
+    choices: processChoices
+}) : undefined;
+
+const setupQuestions = [{
     type: 'input',
     name: 'process',
     default: 'pcsx2.exe',
@@ -17,9 +37,13 @@ const setup = await inquirer.prompt([{
         { name: 'Ratchet & Clank 2 - PS3 Remaster', value: 'rc2_pal_ps3' },
         { name: 'Ratchet & Clank 3 - PS3 Remaster', value: 'rc3_pal_ps3' }
     ]
-}]);
+}];
 
-const game = new Game(setup.process || 'pcsx2.exe', setup.version);
+if (targetProcess?.id) setupQuestions.splice(0, 1);
+
+const setup = await inquirer.prompt(setupQuestions);
+
+const game = new Game(targetProcess.id || setup.process, setup.version);
 console.log('Connected to game with process handle ' + game.process);
 
 async function unlockAllWeapons() {
