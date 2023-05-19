@@ -13,7 +13,8 @@ const setup = await inquirer.prompt([{
     name: 'version',
     message: 'Which game version is running in this process?',
     choices: [
-        { name: 'Ratchet & Clank 1 - NTSC v1.00', value: 'rc1_ntsc_v1' }
+        { name: 'Ratchet & Clank 1 - NTSC v1.00', value: 'rc1_ntsc_v1' },
+        { name: 'Ratchet & Clank 2 - PS3 Remaster', value: 'rc2_pal_ps3' },
     ]
 }]);
 
