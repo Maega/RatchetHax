@@ -1,14 +1,19 @@
 import memoryjs from 'memoryjs';
 
-import rc1_ntsc_v1 from './addresses/rc1_ntsc_v1.js';
-const addresses = {rc1_ntsc_v1};
+// Dynamically import game address files from the games directory
+const games = {};
+const gameFiles = fs.readdirSync('./games').filter(file => file.endsWith('.js'));
+for (const file of gameFiles) {
+    const game = await import('./games/' + file);
+    games[file.split('.')[0]] = game.default;
+}
 
 export default class Game {
     constructor(pid, gameVer = 'rc1_ntsc_v1') {
         // Open the process and get the handle & game addresses
         this.processObject = memoryjs.openProcess(pid);
         this.process = this.processObject.handle;
-        this.address = addresses[gameVer];
+        this.address = games[gameVer];
     }
 
     get nanotech() {

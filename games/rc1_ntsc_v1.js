@@ -4,6 +4,7 @@
 */
 
 export default {
+    bigEndian: false,
     nanotech: 0x201415F8,
     bolts: 0x2015ED98,
     mode: 0x2015F5C4,
@@ -234,7 +235,7 @@ export default {
     planets: {
         intro: {
             id: 0,
-            name: 'Veldin',
+            name: 'Veldin (Tutorial)',
         },
         novalis: {
             id: 1,
