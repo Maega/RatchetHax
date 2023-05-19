@@ -189,115 +189,102 @@ export default {
     },
     gadgets: {
         swingshot: {
-            id: null,
+            id: 13,
             name: 'Swingshot',
             unlocked: 0x301481A8D
         },
         dynamo: {
-            id: null,
+            id: 36,
             name: 'Dynamo',
             unlocked: 0x301481AA4
         },
         thermanator: {
-            id: null,
+            id: 39,
             name: 'Thermanator',
             unlocked: 0x301481AA7
         },
         tractorbeam: {
-            id: null,
+            id: 46,
             name: 'Tractor Beam',
             unlocked: 0x301481AAE
         },
+        hypnomatic: {
+            id: 55,
+            name: 'Hypnomatic',
+            unlocked: 0x301481AB7
+        },
         helipack: {
-            id: null,
+            id: 2,
             name: 'Heli-Pack',
             unlocked: 0x301481A82
         },
         thrusterpack: {
-            id: null,
+            id: 3,
             name: 'Thruster-Pack',
             unlocked: 0x301481A83
         },
         gravityboots: {
-            id: null,
+            id: 19,
             name: 'Gravity Boots',
             unlocked: 0x301481A93
         },
         grindboots: {
-            id: null,
+            id: 20,
             name: 'Grindboots',
             unlocked: 0x301481A94
         },
         chargeboots: {
-            id: null,
+            id: 54,
             name: 'Charge Boots',
             unlocked: 0x301481AB6
-        },
-        hypnomatic: {
-            id: null,
-            name: 'Hypnomatic',
-            unlocked: 0x301481AB7
-        },
-
+        }
     },
     items: {
         megacorphelmet: {
-            id: null,
             name: 'Megacorp Helmet',
             unlocked: 0x301481AAF
         },
         bikerhelmet: {
-            id: null,
             name: 'Biker Helmet',
             unlocked: 0x301481AB0
         },
         hydropack: {
-            id: null,
             name: 'Hydro-Pack',
             unlocked: 0x301481A84
         },
         mapper: {
-            id: null,
             name: 'Mapper',
             unlocked: 0x301481A85
         },
         commandosuit: {
-            id: null,
             name: 'Commando Suit',
             unlocked: 0x301481A86
         },
         armormagnetizer: {
-            id: null,
             name: 'Armor Magnetizer',
             unlocked: 0x301481A87
         },
         levitator: {
-            id: null,
             name: 'Levitator',
             unlocked: 0x301481A88
         },
         glider: {
-            id: null,
             name: 'Glider',
             unlocked: 0x301481A95
         },
         electrolyzer: {
-            id: null,
             name: 'Electrolyzer',
             unlocked: 0x301481AA6
         },
         qwarkstatuette: {
-            id: null,
             name: 'Qwark Statuette',
             unlocked: 0x301481AB1
         },
         boxbreaker: {
-            id: null,
             name: 'Box Breaker',
             unlocked: 0x301481AB2
         },
         infiltrator: {
-            id: null,
             name: 'Infiltrator',
             unlocked: 0x301481AB3
         }
