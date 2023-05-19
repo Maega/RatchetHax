@@ -191,5 +191,6 @@ async function main() {
 
 }
 
+console.clear();
 await main();
 game.close();
