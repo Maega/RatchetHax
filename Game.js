@@ -244,7 +244,7 @@ export default class Game {
                     const alreadyUnlocked = planetUnlocks.includes(planet.id);
                     if (alreadyUnlocked) return;
                     // Find the index of the first element in planetUnlocks with a value of 0
-                    const index = planetUnlocks.findIndex(id => id === 0);
+                    let index = planetUnlocks.findIndex(id => id === 0);
                     // If all slots are filled we'll just replace the last element
                     if (index === -1) index = planetUnlocks.length - 1;
                     // Multiply the index by 4 to get the byte offset from the base address
