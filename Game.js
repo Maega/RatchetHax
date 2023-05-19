@@ -17,10 +17,10 @@ export default class Game {
     }
 
     get nanotech() {
-        return memoryjs.readMemory(this.process, this.address.nanotech, memoryjs.UINT8);
+        return memoryjs.readMemory(this.process, this.address.nanotech, memoryjs.UINT32);
     }
     set nanotech(value) {
-        memoryjs.writeMemory(this.process, this.address.nanotech, value, memoryjs.UINT8);
+        memoryjs.writeMemory(this.process, this.address.nanotech, value, memoryjs.UINT32);
     }
 
     get bolts() {
