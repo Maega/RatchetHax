@@ -15,6 +15,7 @@ const setup = await inquirer.prompt([{
     choices: [
         { name: 'Ratchet & Clank 1 - NTSC v1.00', value: 'rc1_ntsc_v1' },
         { name: 'Ratchet & Clank 2 - PS3 Remaster', value: 'rc2_pal_ps3' },
+        { name: 'Ratchet & Clank 3 - PS3 Remaster', value: 'rc3_pal_ps3' }
     ]
 }]);
 
