@@ -33,9 +33,12 @@ const setupQuestions = [{
     name: 'version',
     message: 'Which game version is running in this process?',
     choices: [
-        { name: 'Ratchet & Clank 1 - NTSC v1.00', value: 'rc1_ntsc_v1' },
-        { name: 'Ratchet & Clank 2 - PS3 Remaster', value: 'rc2_pal_ps3' },
-        { name: 'Ratchet & Clank 3 - PS3 Remaster', value: 'rc3_pal_ps3' }
+        { name: 'Ratchet & Clank 1 - NTSC v1.00', value: 'rc1_ps2_scus97199' },
+        { name: 'Ratchet & Clank 1 - PS3 Remaster', value: 'rc1_ps3_npua80643' },
+        { name: 'Ratchet & Clank 2 - PS3 Remaster', value: 'rc2_ps3_npua80644' },
+        { name: 'Ratchet & Clank 3 - PS3 Remaster', value: 'rc3_ps3_npua80645' },
+        { name: 'Ratchet & Clank Deadlocked - PS3 Remaster', value: 'rc4_ps3_npua80646' },
+        { name: 'Ratchet & Clank Tools of Destruction', value: 'rctod_ps3_npua80965' }
     ]
 }];
 
