@@ -33,22 +33,32 @@ export default class Game {
         };
     }
 
+    _readMem(addressObj) {
+        if (addressObj[0] === null) return console.error('Function is not supported by this game or is not yet implemented.');
+        return memoryjs.readMemory(this.process, addressObj[0], memoryjs[addressObj[1].toUpperCase()]);
+    }
+
+    _writeMem(addressObj, value) {
+        if (addressObj[0] === null) return console.error('Function is not supported by this game or is not yet implemented.');
+        return memoryjs.writeMemory(this.process, addressObj[0], value, memoryjs[addressObj[1].toUpperCase()]);
+    }
+
     get nanotech() {
-        return memoryjs.readMemory(this.process, this.address.nanotech, memoryjs.UINT32);
+        return this._readMem(this.address.nanotech);
     }
     set nanotech(value) {
-        memoryjs.writeMemory(this.process, this.address.nanotech, value, memoryjs.UINT32);
+        this._writeMem(this.address.nanotech, value);
     }
 
     get bolts() {
-        return memoryjs.readMemory(this.process, this.address.bolts, memoryjs.UINT32);
+        return this._readMem(this.address.bolts);
     }
     set bolts(value) {
-        memoryjs.writeMemory(this.process, this.address.bolts, value, memoryjs.UINT32);
+        this._writeMem(this.address.bolts, value);
     }
 
     get equipped() {
-        const itemId = memoryjs.readMemory(this.process, this.address.current.item, memoryjs.UINT8);
+        const itemId = this._readMem(this.address.current.item);
 
         if (itemId === 0) return { id: 0, name: 'No Item' };
 
@@ -63,11 +73,11 @@ export default class Game {
     set equipped(itemId) {
         const equippedItem = this.address.weapons[itemId] || this.address.gadgets[itemId];
         if (!equippedItem) return console.error(`Weapon "${itemId}" does not exist.`);
-        memoryjs.writeMemory(this.process, this.address.current.item, equippedItem.id, memoryjs.UINT8);
+        this._writeMem(this.address.current.item, equippedItem.id);
     }
 
     get currentPlanet() {
-        const planetId = memoryjs.readMemory(this.process, this.address.current.planet, memoryjs.UINT8);
+        const planetId = this._readMem(this.address.current.planet);
         const planet = Object.values(this.address.planets).find(planet => planet.id === planetId);
         return planet;
     }
@@ -80,17 +90,17 @@ export default class Game {
     }
 
     get playerState() {
-        return memoryjs.readMemory(this.process, this.address.state, memoryjs.UINT32);
+        return this._readMem(this.address.state);
     }
     set playerState(value) {
-        memoryjs.writeMemory(this.process, this.address.state, value, memoryjs.UINT32);
+        this._writeMem(this.address.state, value);
     }
 
     get mode() {
-        return memoryjs.readMemory(this.process, this.address.mode, memoryjs.UINT32);
+        return this._readMem(this.address.mode);
     }
     set mode(value) {
-        memoryjs.writeMemory(this.process, this.address.mode, value, memoryjs.UINT32);
+        this._writeMem(this.address.mode, value);
     }
 
     get playerPos() {
@@ -162,14 +172,15 @@ export default class Game {
             id: weapon.id,
             name: weapon.name,
             get unlocked() {
-                return !!memoryjs.readMemory(self.process, weapon.unlocked, memoryjs.UINT8);
+                return !!self._readMem(weapon.unlocked);
             },
             set unlocked(value) {
-                memoryjs.writeMemory(self.process, weapon.unlocked, !!value ? 1 : 0, memoryjs.UINT8);
+                self._writeMem(weapon.unlocked, !!value ? 1 : 0);
             },
             get gold() {
                 if (!weapon.gold) return console.error(`Weapon "${weapon.name}" does not have a gold variant.`);
                 return !!memoryjs.readMemory(self.process, weapon.gold, memoryjs.UINT8);
+                //return !!self._readMem(weapon.gold);
             },
             set gold(value) {
                 if (!weapon.gold) return console.error(`Weapon "${weapon.name}" does not have a gold variant.`);
@@ -177,18 +188,18 @@ export default class Game {
             },
             get ammo() {
                 if (!weapon.ammo) return console.error(`Weapon "${weapon.name}" does not use ammo.`);
-                return memoryjs.readMemory(self.process, weapon.ammo, memoryjs.UINT32);
+                return self._readMem(weapon.ammo);
             },
             set ammo(value) {
                 if (!weapon.ammo) return console.error(`Weapon "${weapon.name}" does not use ammo.`);
-                memoryjs.writeMemory(self.process, weapon.ammo, value, memoryjs.UINT32);
+                self._writeMem(weapon.ammo, value);
             },
             get equipped() {
-                return weapon.id === memoryjs.readMemory(self.process, self.address.current.item, memoryjs.UINT8);
+                return weapon.id === self._readMem(self.address.current.item);
             },
             set equipped(value) {
-                if (value) memoryjs.writeMemory(self.process, self.address.current.item, weapon.id, memoryjs.UINT8);
-                else if (this.equipped) memoryjs.writeMemory(self.process, self.address.current.item, 0, memoryjs.UINT8);
+                if (value) self._writeMem(self.address.current.item, weapon.id);
+                else if (this.equipped) self._writeMem(self.address.current.item, 0);
             }
         }
     }
@@ -201,17 +212,17 @@ export default class Game {
             id: gadget.id,
             name: gadget.name,
             get unlocked() {
-                return !!memoryjs.readMemory(self.process, gadget.unlocked, memoryjs.UINT8);
+                return !!self._readMem(gadget.unlocked);
             },
             set unlocked(value) {
-                memoryjs.writeMemory(self.process, gadget.unlocked, !!value ? 1 : 0, memoryjs.UINT8);
+                self._writeMem(gadget.unlocked, !!value ? 1 : 0);
             },
             get equipped() {
-                return gadget.id === memoryjs.readMemory(self.process, self.address.current.item, memoryjs.UINT8);
+                return gadget.id === self._readMem(self.address.current.item);
             },
             set equipped(value) {
-                if (value) memoryjs.writeMemory(self.process, self.address.current.item, gadget.id, memoryjs.UINT8);
-                else if (this.equipped) memoryjs.writeMemory(self.process, self.address.current.item, 0, memoryjs.UINT8);
+                if (value) self._writeMem(self.address.current.item, gadget.id);
+                else if (this.equipped) self._writeMem(self.address.current.item, 0);
             }
         }
     }
@@ -223,10 +234,10 @@ export default class Game {
         return {
             name: item.name,
             get unlocked() {
-                return !!memoryjs.readMemory(self.process, item.unlocked, memoryjs.UINT8);
+                return !!self._readMem(item.unlocked);
             },
             set unlocked(value) {
-                memoryjs.writeMemory(self.process, item.unlocked, !!value ? 1 : 0, memoryjs.UINT8);
+                self._writeMem(item.unlocked, !!value ? 1 : 0);
             }
         }
     }

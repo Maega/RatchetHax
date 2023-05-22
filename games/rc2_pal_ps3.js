@@ -5,288 +5,288 @@
 
 export default {
     bigEndian: true,
-    nanotech: 0x3014816AC,
-    bolts: 0x301329A90,
+    nanotech: [0x3014816AC, 'uint32'],
+    bolts: [0x301329A90, 'uint32'],
     multiplier: 0x301329ACA, // 1 byte, max 255 multiplier.
     raritanium: 0x301329A94,
-    mode: null,
-    state: null,
+    mode: [null, 'uint32'],
+    state: [null, 'uint32'],
     posBase: 0x30147F260,
     galacticMapBase: 0x301481BD3, // 4 bytes * 18 slots. Read or write a 72 byte buffer from base.
     current: {
-        item: 0x30147F1BB,
-        planet: null
+        item: [0x30147F1BB, 'uint8'],
+        planet: [null, 'uint8']
     },
     weapons: {
         lancer: {
             id: 30,
             name: 'Lancer',
-            unlocked: 0x301481A9E,
+            unlocked: [0x301481A9E, 'uint8'],
             gold: null,
-            ammo: 0x3014818A4
+            ammo: [0x3014818A4, 'uint32']
         },
         gravitybomb: {
             id: 42,
             name: 'Gravity Bomb',
-            unlocked: 0x301481AAA,
+            unlocked: [0x301481AAA, 'uint8'],
             gold: null,
-            ammo: 0x3014818D4
+            ammo: [0x3014818D4, 'uint32']
         },
         chopper: {
             id: 22,
             name: 'Chopper',
-            unlocked: 0x301481A96,
+            unlocked: [0x301481A96, 'uint8'],
             gold: null,
-            ammo: 0x301481884
+            ammo: [0x301481884, 'uint32']
         },
         seekergun: {
             id: 24,
             name: 'Seeker Gun',
-            unlocked: 0x301481A98,
+            unlocked: [0x301481A98, 'uint8'],
             gold: null,
-            ammo: 0x30148188C
+            ammo: [0x30148188C, 'uint32']
         },
         pulserifle: {
             id: 23,
             name: 'Pulse Rifle',
-            unlocked: 0x301481A97,
+            unlocked: [0x301481A97, 'uint8'],
             gold: null,
-            ammo: 0x301481888
+            ammo: [0x301481888, 'uint32']
         },
         miniturretglove: {
             id: 41,
             name: 'Miniturret Glove',
-            unlocked: 0x301481AA9,
+            unlocked: [0x301481AA9, 'uint8'],
             gold: null,
-            ammo: 0x3014818D0
+            ammo: [0x3014818D0, 'uint32']
         },
         blitzgun: {
             id: 26,
             name: 'Blitz Gun',
-            unlocked: 0x301481A9A,
+            unlocked: [0x301481A9A, 'uint8'],
             gold: null,
-            ammo: 0x301481894
+            ammo: [0x301481894, 'uint32']
         },
         shieldcharger: {
             id: 45,
             name: 'Shield Charger',
-            unlocked: 0x301481AAD,
+            unlocked: [0x301481AAD, 'uint8'],
             gold: null,
-            ammo: 0x3014818E0
+            ammo: [0x3014818E0, 'uint32']
         },
         synthenoid: {
             id: 31,
             name: 'Synthenoid',
-            unlocked: 0x301481A9F,
+            unlocked: [0x301481A9F, 'uint8'],
             gold: null,
-            ammo: 0x3014818A8
+            ammo: [0x3014818A8, 'uint32']
         },
         lavagun: {
             id: 29,
             name: 'Lava Gun',
-            unlocked: 0x301481A9D,
+            unlocked: [0x301481A9D, 'uint8'],
             gold: null,
-            ammo: 0x3014818A0
+            ammo: [0x3014818A0, 'uint32']
         },
         bouncer: {
             id: 37,
             name: 'Bouncer',
-            unlocked: 0x301481AA5,
+            unlocked: [0x301481AA5, 'uint8'],
             gold: null,
-            ammo: 0x3014818C0
+            ammo: [0x3014818C0, 'uint32']
         },
         minirockettube: {
             id: 27,
             name: 'Minirocket Tube',
-            unlocked: 0x301481A9B,
+            unlocked: [0x301481A9B, 'uint8'],
             gold: null,
-            ammo: 0x301481898
+            ammo: [0x301481898, 'uint32']
         },
         plasmacoil: {
             id: 28,
             name: 'Plasma Coil',
-            unlocked: 0x301481A9C,
+            unlocked: [0x301481A9C, 'uint8'],
             gold: null,
-            ammo: 0x30148189C
+            ammo: [0x30148189C, 'uint32']
         },
         hoverbombgun: {
             id: 25,
             name: 'Hoverbomb Gun',
-            unlocked: 0x301481A99,
+            unlocked: [0x301481A99, 'uint8'],
             gold: null,
-            ammo: 0x301481890
+            ammo: [0x301481890, 'uint32']
         },
         spiderbotglove: {
             id: 32,
             name: 'Spiderbot Glove',
-            unlocked: 0x301481AA0,
+            unlocked: [0x301481AA0, 'uint8'],
             gold: null,
-            ammo: 0x3014818AC
+            ammo: [0x3014818AC, 'uint32']
         },
         sheepinator: {
             id: 16,
             name: 'Sheepinator',
-            unlocked: 0x301481A90,
+            unlocked: [0x301481A90, 'uint8'],
             gold: null,
             ammo: false
         },
         teslaclaw: {
             id: 18,
             name: 'Tesla Claw',
-            unlocked: 0x301481A92,
+            unlocked: [0x301481A92, 'uint8'],
             gold: null,
-            ammo: 0x301481874
+            ammo: [0x301481874, 'uint32']
         },
         bombglove: {
             id: 12,
             name: 'Bomb Glove',
-            unlocked: 0x301481A8C,
+            unlocked: [0x301481A8C, 'uint8'],
             gold: null,
-            ammo: 0x30148185C
+            ammo: [0x30148185C, 'uint32']
         },
         walloper: {
             id: 53,
             name: 'Walloper',
-            unlocked: 0x301481AB5,
+            unlocked: [0x301481AB5, 'uint8'],
             gold: null,
             ammo: false
         },
         visibombgun: {
             id: 14,
             name: 'Visibomb Gun',
-            unlocked: 0x301481A8E,
+            unlocked: [0x301481A8E, 'uint8'],
             gold: null,
-            ammo: 0x301481864
+            ammo: [0x301481864, 'uint32']
         },
         decoyglove: {
             id: 17,
             name: 'Decoy Glove',
-            unlocked: 0x301481A91,
+            unlocked: [0x301481A91, 'uint8'],
             gold: null,
-            ammo: 0x301481870
+            ammo: [0x301481870, 'uint32']
         },
         zodiac: {
             id: 43,
             name: 'Zodiac',
-            unlocked: 0x301481AAB,
+            unlocked: [0x301481AAB, 'uint8'],
             gold: null,
-            ammo: 0x3014818D8
+            ammo: [0x3014818D8, 'uint32']
         },
         ryno2: {
             id: 44,
             name: 'R.Y.N.O. II',
-            unlocked: 0x301481AAC,
+            unlocked: [0x301481AAC, 'uint8'],
             gold: null,
-            ammo: 0x3014818DC
+            ammo: [0x3014818DC, 'uint32']
         },
         clankzapper: {
             id: 9,
             name: 'Clank Zapper',
-            unlocked: 0x301481A89,
+            unlocked: [0x301481A89, 'uint8'],
             gold: null,
-            ammo: 0x301481850
+            ammo: [0x301481850, 'uint32']
         }
     },
     gadgets: {
         swingshot: {
             id: 13,
             name: 'Swingshot',
-            unlocked: 0x301481A8D
+            unlocked: [0x301481A8D, 'uint8']
         },
         dynamo: {
             id: 36,
             name: 'Dynamo',
-            unlocked: 0x301481AA4
+            unlocked: [0x301481AA4, 'uint8']
         },
         thermanator: {
             id: 39,
             name: 'Thermanator',
-            unlocked: 0x301481AA7
+            unlocked: [0x301481AA7, 'uint8']
         },
         tractorbeam: {
             id: 46,
             name: 'Tractor Beam',
-            unlocked: 0x301481AAE
+            unlocked: [0x301481AAE, 'uint8']
         },
         hypnomatic: {
             id: 55,
             name: 'Hypnomatic',
-            unlocked: 0x301481AB7
+            unlocked: [0x301481AB7, 'uint8']
         },
         helipack: {
             id: 2,
             name: 'Heli-Pack',
-            unlocked: 0x301481A82
+            unlocked: [0x301481A82, 'uint8']
         },
         thrusterpack: {
             id: 3,
             name: 'Thruster-Pack',
-            unlocked: 0x301481A83
+            unlocked: [0x301481A83, 'uint8']
         },
         gravityboots: {
             id: 19,
             name: 'Gravity Boots',
-            unlocked: 0x301481A93
+            unlocked: [0x301481A93, 'uint8']
         },
         grindboots: {
             id: 20,
             name: 'Grindboots',
-            unlocked: 0x301481A94
+            unlocked: [0x301481A94, 'uint8']
         },
         chargeboots: {
             id: 54,
             name: 'Charge Boots',
-            unlocked: 0x301481AB6
+            unlocked: [0x301481AB6, 'uint8']
         }
     },
     items: {
         megacorphelmet: {
             name: 'Megacorp Helmet',
-            unlocked: 0x301481AAF
+            unlocked: [0x301481AAF, 'uint8']
         },
         bikerhelmet: {
             name: 'Biker Helmet',
-            unlocked: 0x301481AB0
+            unlocked: [0x301481AB0, 'uint8']
         },
         hydropack: {
             name: 'Hydro-Pack',
-            unlocked: 0x301481A84
+            unlocked: [0x301481A84, 'uint8']
         },
         mapper: {
             name: 'Mapper',
-            unlocked: 0x301481A85
+            unlocked: [0x301481A85, 'uint8']
         },
         commandosuit: {
             name: 'Commando Suit',
-            unlocked: 0x301481A86
+            unlocked: [0x301481A86, 'uint8']
         },
         armormagnetizer: {
             name: 'Armor Magnetizer',
-            unlocked: 0x301481A87
+            unlocked: [0x301481A87, 'uint8']
         },
         levitator: {
             name: 'Levitator',
-            unlocked: 0x301481A88
+            unlocked: [0x301481A88, 'uint8']
         },
         glider: {
             name: 'Glider',
-            unlocked: 0x301481A95
+            unlocked: [0x301481A95, 'uint8']
         },
         electrolyzer: {
             name: 'Electrolyzer',
-            unlocked: 0x301481AA6
+            unlocked: [0x301481AA6, 'uint8']
         },
         qwarkstatuette: {
             name: 'Qwark Statuette',
-            unlocked: 0x301481AB1
+            unlocked: [0x301481AB1, 'uint8']
         },
         boxbreaker: {
             name: 'Box Breaker',
-            unlocked: 0x301481AB2
+            unlocked: [0x301481AB2, 'uint8']
         },
         infiltrator: {
             name: 'Infiltrator',
-            unlocked: 0x301481AB3
+            unlocked: [0x301481AB3, 'uint8']
         }
     },
     planets: {
