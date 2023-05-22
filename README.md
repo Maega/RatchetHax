@@ -289,7 +289,7 @@ const unlockedPlanets = game.planetUnlocks;
 
 Currently, only the original v1.00 (Black Label) NTSC version of Ratchet & Clank 1 is fully supported by RatchetHax.
 
-Early support has now been added for the PS3 remasters of Ratchet & Clank 2 and 3. Not all functionality is working or fully tested yet, but progress is being made on implementing full support for these games on both PS2 and PS3.
+Early support has now been added for several other games in the series. Not all functionality is working or fully tested yet, but progress is being made on implementing full support for these games on both PS2 and PS3.
 
 Adding support for other Ratchet & Clank games is as simple as cloning [an existing address file](games/rc1_ntsc_v1.js) and making the neccessary address edits. [Game.js](Game.js) will automatically detect and import all address files in [./games](games) on launch.
 
@@ -297,11 +297,14 @@ I'm working on adding support for new builds as time permits. If you'd like to c
 
 When instantiating the Game class, you'll need to pass a game version string parameter. Below is a table of supported games and their version strings:
 
-| Game Build | Version String |
-| -------------------------------- | ---------- |
-| Ratchet & Clank 1 (PS2, NTSC v1.00) | rc1_ntsc_v1 |
-| Ratchet & Clank 2 (PS3, NPUA80644) | rc2_pal_ps3 |
-| Ratchet & Clank 3 (PS3, NPUA80645) | rc3_pal_ps3 |
+| Game Build | Version String | Support Status |
+| -------------------------------- | ---------- | ---------- |
+| Ratchet & Clank 1 (PS2, NTSC v1.00) | rc1_ps2_scus97199 | FULL |
+| Ratchet & Clank 1 (PS3, NPUA80643) | rc1_ps3_npua80643 | PARTIAL |
+| Ratchet & Clank 2 (PS3, NPUA80644) | rc2_ps3_npua80644 | PARTIAL |
+| Ratchet & Clank 3 (PS3, NPUA80645) | rc3_ps3_npua80645 | PARTIAL |
+| Ratchet & Clank Deadlocked (PS3, NPUA80646) | rc4_ps3_npua80646 | PARTIAL |
+| Ratchet & Clank Tools of Destruction (PS3, NPUA80965) | rctod_ps3_npua80965 | PARTIAL |
 
 ## Game Modes
 
