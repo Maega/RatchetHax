@@ -253,7 +253,9 @@ export default class Game {
         if (!weapon) return console.error(`Weapon "${weaponId}" does not exist.`);
         return {
             id: weapon.id,
+            key: weaponId,
             name: weapon.name,
+            type: 'weapon',
             get unlocked() {
                 return !!self._readMem(weapon.unlocked);
             },
@@ -297,7 +299,9 @@ export default class Game {
         if (!gadget) return console.error(`Gadget "${gadgetId}" does not exist.`);
         return {
             id: gadget.id,
+            key: gadgetId,
             name: gadget.name,
+            type: 'gadget',
             get unlocked() {
                 return !!self._readMem(gadget.unlocked);
             },
@@ -324,6 +328,8 @@ export default class Game {
         if (!item) return console.error(`Item "${itemId}" does not exist.`);
         return {
             name: item.name,
+            key: itemId,
+            type: 'item',
             get unlocked() {
                 return !!self._readMem(item.unlocked);
             },
