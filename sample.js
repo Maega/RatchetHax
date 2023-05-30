@@ -154,6 +154,29 @@ async function setPos() {
     game.playerPos = newPos;
 }
 
+async function teleport() {
+    // Get current planet ID
+    console.log(`You are currently on ${game.currentPlanet.name} (${game.currentPlanet.id}).`);
+
+    const gameVersion = setup.version.split('_')[0];
+    let locations = await import(`./coords/${gameVersion}.json`, {assert: { type: "json" }});
+    locations = locations.default.find(x => x.planetId === game.currentPlanet.id)?.locations;
+
+    if (!locations) return console.error('No locations found for your current planet.');
+    
+    const choice = await inquirer.prompt([{
+        type: 'list',
+        name: 'playerPos',
+        message: 'Where do you want to teleport?',
+        loop: false,
+        pageSize: 30,
+        choices: locations
+    }]);
+
+    game.playerPos = choice.playerPos;
+
+}
+
 async function quit() {
     game.close();
     process.exit(0);
@@ -183,6 +206,7 @@ async function main() {
             { name: 'Unlock All Items', value: unlockAllItems },
             new inquirer.Separator('──── Position ─────'),
             { name: 'Set Player Position', value: setPos },
+            { name: 'Teleport to Location', value: teleport },
             new inquirer.Separator('──── Debugging ────'),
             { name: 'Show Debug Menu', value: showDebugMenu },
             new inquirer.Separator('───────────────────'),
