@@ -309,5 +309,26 @@ export default {
             id: 18,
             name: 'Veldin II',
         }
+    },
+    debug: {
+        levelOffsets: {
+            "0": null,
+            "1": 0x2016C4DC
+        },
+        draw: [0x00, 'uint32'],
+        update: [0x04, 'uint32'],
+        control: [0x10, 'uint32'],
+        profile: [0x14, 'uint32'],
+        occl: [0x18, 'uint32'],
+        bookmark: [0x1C, 'uint32'],
+        invinc: [0x20, 'uint32'],
+        drawdist: [0x24, 'uint32'],
+        coll: [0x28, 'uint32'],
+        tvmode: [0x2C, 'uint32'],
+        screen: [0x30, 'uint32'],
+        scene: [0x34, 'uint32'],
+        segment: [0x38, 'uint32'],
+        battlecam: [0xEC, 'uint8'],
+        actuator: [0xF0, 'uint8'],
     }
 };
