@@ -244,6 +244,10 @@ export default class Game {
     }
 
     weapons(weaponId) {
+        
+        // If no weaponId is provided, return an array of all weapons.
+        if (!weaponId) return Object.keys(this.address.weapons).map(key => this.weapons(key));
+        
         const self = this;
         const weapon = this.address.weapons[weaponId];
         if (!weapon) return console.error(`Weapon "${weaponId}" does not exist.`);
@@ -284,6 +288,10 @@ export default class Game {
     }
 
     gadgets(gadgetId) {
+
+        // If no gadgetId is provided, return an array of all gadgets.
+        if (!gadgetId) return Object.keys(this.address.gadgets).map(key => this.gadgets(key));
+
         const self = this;
         const gadget = this.address.gadgets[gadgetId];
         if (!gadget) return console.error(`Gadget "${gadgetId}" does not exist.`);
@@ -307,6 +315,10 @@ export default class Game {
     }
 
     items(itemId) {
+
+        // If no itemId is provided, return an array of all items.
+        if (!itemId) return Object.keys(this.address.items).map(key => this.items(key));
+
         const self = this;
         const item = this.address.items[itemId];
         if (!item) return console.error(`Item "${itemId}" does not exist.`);
@@ -322,6 +334,10 @@ export default class Game {
     }
 
     planets(planetId) {
+
+        // If no planetId is provided, return an array of all planets.
+        if (!planetId) return Object.keys(this.address.planets).map(key => this.planets(key));
+
         const self = this;
         const planet = this.address.planets[planetId];
         const planetUnlocks = this.planetUnlocks;
