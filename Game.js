@@ -263,7 +263,7 @@ export default class Game {
                 self._writeMem(weapon.unlocked, !!value ? 1 : 0);
             },
             get gold() {
-                if (!weapon.gold) return console.error(`Weapon "${weapon.name}" does not have a gold variant.`);
+                if (!weapon.gold) return undefined; //console.error(`Weapon "${weapon.name}" does not have a gold variant.`);
                 return !!memoryjs.readMemory(self.process, weapon.gold, memoryjs.UINT8);
                 //return !!self._readMem(weapon.gold);
             },
@@ -272,7 +272,7 @@ export default class Game {
                 memoryjs.writeMemory(self.process, weapon.gold, !!value ? 1 : 0, memoryjs.UINT8);
             },
             get ammo() {
-                if (!weapon.ammo) return console.error(`Weapon "${weapon.name}" does not use ammo.`);
+                if (!weapon.ammo) return undefined; //console.error(`Weapon "${weapon.name}" does not use ammo.`);
                 return self._readMem(weapon.ammo);
             },
             set ammo(value) {
@@ -391,46 +391,3 @@ export default class Game {
         memoryjs.closeProcess(this.process);
     }
 }
-
-//const game = new GameRetail('pcsx2.exe');
-
-/* console.log({...game.playerPos});
-console.log(game.playerPos.z = 100);
-game.playerPos = {z: 100};
-game.playerPos = {...game.playerPos}; */
-
-/* console.log(game.playerPos);
-
-game.playerPos = {
-    z: 100
-} */
-
-/* function giveAll() {
-    // Unlock all weapons and make them gold
-    for (const weaponId in address.weapons) {
-        game.weapons(weaponId).unlocked = true;
-        game.weapons(weaponId).gold = true;
-    }
-
-    // Unlock all gadgets
-    for (const gadgetId in address.gadgets) {
-        game.gadgets(gadgetId).unlocked = true;
-    }
-
-    // Unlock all items
-    for (const itemId in address.items) {
-        game.items(itemId).unlocked = true;
-    }
-
-    // Unlock all planets
-    for (const planetId in address.planets) {
-        game.planets(planetId).unlocked = true;
-    }
-} */
-
-//game.close();
-
-/* setInterval(() => {
-    const game1State = game1.state;
-    game2.state = game1State;
-}, 5); */
