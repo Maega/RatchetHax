@@ -15,7 +15,7 @@ export default {
     galacticMapBase: 0x301481BD3, // 4 bytes * 18 slots. Read or write a 72 byte buffer from base.
     current: {
         item: [0x30147F1BB, 'uint8'],
-        planet: [null, 'uint8']
+        planet: [0x301329A3F, 'uint8']
     },
     weapons: {
         lancer: {
@@ -23,6 +23,7 @@ export default {
             name: 'Lancer',
             unlocked: [0x301481A9E, 'uint8'],
             gold: null,
+            //exp: [0x301481B68, 'uint32'], // Approx 9000 exp tp upgrade lancer
             ammo: [0x3014818A4, 'uint32']
         },
         gravitybomb: {
