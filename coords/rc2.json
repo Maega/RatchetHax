@@ -1,0 +1,73 @@
+[
+    {
+        "planetId": 1,
+        "locations": [
+            {
+                "name": "Initial Spawn Point",
+                "value": {
+                    "x": 293.8,
+                    "y": 411.6,
+                    "z": 115,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 0.9
+                }
+            },
+            {
+                "name": "Megacorp Outlet Path - Dynamo",
+                "value": {
+                    "x": 317,
+                    "y": 570,
+                    "z": 110,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 1.12
+                }
+            },
+            {
+                "name": "Megacorp Outlet Path - Swamp Monster Entrance",
+                "value": {
+                    "x": 401.4,
+                    "y": 635,
+                    "z": 127.5,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 0.02
+                }
+            },
+            {
+                "name": "Megacorp Outlet Path - End",
+                "value": {
+                    "x": 349.7,
+                    "y": 616.7,
+                    "z": 123.1,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": -3.11
+                }
+            },
+            {
+                "name": "Tractor Beam Path - End",
+                "value": {
+                    "x": 300.7,
+                    "y": 349.7,
+                    "z": 109.5,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 3.05
+                }
+            },
+            {
+                "name": "Tractor Beam Path - Platinum Bolt",
+                "value": {
+                    "x": 284.5,
+                    "y": 334.7,
+                    "z": 117,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": -0.08
+                }
+            }
+        ]
+    }
+]

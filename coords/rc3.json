@@ -1,6 +1,6 @@
 [
     {
-        "planet": 5,
+        "planetId": 5,
         "locations": [
             {
                 "name": "Slim Cognito",

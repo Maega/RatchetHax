@@ -74,7 +74,7 @@
                 }
             },
             {
-                "name": "Caves - Gold Bolt",
+                "name": "Caverns - Gold Bolt #1",
                 "value": {
                     "x": 98,
                     "y": 99,
@@ -82,6 +82,17 @@
                     "pitch": 0,
                     "roll": 0,
                     "yaw": 2.38
+                }
+            },
+            {
+                "name": "Caverns - Gold Bolt #2",
+                "value": {
+                    "x": 39,
+                    "y": 115,
+                    "z": 47,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 2.3
                 }
             }
         ]
