@@ -1,6 +1,8 @@
 # RatchetHax
 
-A Node.js-based memory editor and trainer for the Ratchet & Clank PS2 series.
+![Trainer Preview](https://i.imgur.com/SXK2TVf.png)
+
+A Node.js-based memory editor and trainer for the Ratchet & Clank series on PS2 and PS3.
 
 RatchetHax includes a standalone trainer via the `trainer.js` sample code that has various features like the ability to give yourself bolts, weapons etc, set the player's location and show the debug menu (in RC1).
 
@@ -13,7 +15,7 @@ It can also be used in your own project to write scripts and game mods with Java
 * A PS2 Emulator
     * Memory addresses are currently tested on *PCSX2 1.6.0*, offsets *may* need to be adjusted for other emulators.
 * *or* a PS3 Emulator
-    * Memory address are offset by *0x300000000* bytes which should be compatible with most versions of *RPCS3*.
+    * Memory addresses are offset by *0x300000000* bytes which should be compatible with most versions of *RPCS3*.
 
 ## Trainer Quick Start
 
@@ -25,7 +27,22 @@ It can also be used in your own project to write scripts and game mods with Java
 4. Open *Windows Terminal* or *Command Prompt* and navigate to the folder you extracted the zip to
     * This is easiest to do by right clicking an empty space in the folder and then choosing *Open in Terminal*
 5. Run `npm install` to automatically install dependencies
-6. Finally, run `node trainer.js` to run the included sample trainer
+6. Finally, run `npm run trainer` to run the included sample trainer
+
+## Trainer Usage
+
+When you launch the trainer, it'll look for any running emulators on your system. If it finds any, you'll be able to choose one of them from a list.
+If no emulator processes were found, you'll be prompted to specify a process name or PID to attach the trainer to.
+
+![Trainer Setup - Select Process](https://i.imgur.com/fZvU5ge.png)
+
+After selecting a process to attach to, the trainer will give you a list of supported games to choose from.
+
+![Trainer Setup - Select Game](https://i.imgur.com/WZDSwuZ.png)
+
+After selecting a game from the list, the trainer will attach to the emulator and you'll be taken to the main menu.
+
+![Trainer - Main Menu](https://i.imgur.com/qD82ARl.png)
 
 ## Install
 
@@ -72,7 +89,7 @@ const game = Game(processId, gameVersion);
 1. Run the `trainer.js` example for a simple, interactive implementation of RatchetHax.
     * The trainer.js example requires `inquirer`. If you installed dependencies via the project's `package.json` file, you're good to go.
 ```bash
-node trainer.js
+npm run trainer
 ```
 
 ## API Examples
