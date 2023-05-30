@@ -1,0 +1,253 @@
+[
+    {
+        "planetId": 0,
+        "locations": [
+            {
+                "name": "Initial Spawn Point",
+                "value": {
+                    "x": 132,
+                    "y": 115.4,
+                    "z": 31.5,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 0.66
+                }
+            },
+            {
+                "name": "Clank's Crash Site",
+                "value": {
+                    "x": 160.5,
+                    "y": 274.8,
+                    "z": 30.5,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": -0.4
+                }
+            }
+        ]
+    },
+    {
+        "planetId": 1,
+        "locations": [
+            {
+                "name": "Initial Spawn Point",
+                "value": {
+                    "x": 162.6,
+                    "y": 136.2,
+                    "z": 60,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 1.98
+                }
+            },
+            {
+                "name": "Waterworks - Gold Bolt",
+                "value": {
+                    "x": 244,
+                    "y": 107.5,
+                    "z": 87.5,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": -2.13
+                }
+            },
+            {
+                "name": "Waterworks - End",
+                "value": {
+                    "x": 260,
+                    "y": 179,
+                    "z": 95.5,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 2.58
+                }
+            },
+            {
+                "name": "Find a New Ship - End",
+                "value": {
+                    "x": 150,
+                    "y": 212,
+                    "z": 41.5,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": -0.41
+                }
+            },
+            {
+                "name": "Caves - Gold Bolt",
+                "value": {
+                    "x": 98,
+                    "y": 99,
+                    "z": 57,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 2.38
+                }
+            }
+        ]
+    },
+    {
+        "planetId": 2,
+        "locations": [
+            {
+                "name": "Initial Spawn Point",
+                "value": {
+                    "x": 210.5,
+                    "y": 170.2,
+                    "z": 25.5,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 2.3
+                }
+            },
+            {
+                "name": "Skid's Agent Path - End",
+                "value": {
+                    "x": 248.5,
+                    "y": 269.5,
+                    "z": 25.5,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": -0.26
+                }
+            },
+            {
+                "name": "Truck - Gold Bolt",
+                "value": {
+                    "x": 263,
+                    "y": 202.5,
+                    "z": 28,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": -2.65
+                }
+            },
+            {
+                "name": "Cannon - Gold Bolt",
+                "value": {
+                    "x": 244,
+                    "y": 306.5,
+                    "z": 37.5,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 0.72
+                }
+            },
+            {
+                "name": "Trespasser Path - End",
+                "value": {
+                    "x": 90.5,
+                    "y": 268.5,
+                    "z": 61,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 0.64
+                }
+            },
+            {
+                "name": "Sandshark Area - Gold Bolt",
+                "value": {
+                    "x": 168.5,
+                    "y": 90,
+                    "z": 25.5,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 0.58
+                }
+            }
+        ]
+    },
+    {
+        "planetId": 3,
+        "locations": [
+            {
+                "name": "Initial Spawn Point",
+                "value": {
+                    "x": 264,
+                    "y": 102,
+                    "z": 54.5,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 1.57
+                }
+            },
+            {
+                "name": "Al's Roboshack",
+                "value": {
+                    "x": 287.7,
+                    "y": 244,
+                    "z": 34.5,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 0
+                }
+            },
+            {
+                "name": "Train Station Path - Gold Bolt",
+                "value": {
+                    "x": 280.8,
+                    "y": 392.2,
+                    "z": 89,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 2.35
+                }
+            },
+            {
+                "name": "Train Station Path - Train Start",
+                "value": {
+                    "x": 199.5,
+                    "y": 344.2,
+                    "z": 80.5,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 2.35
+                }
+            },
+            {
+                "name": "Train Station Path - Infobot",
+                "value": {
+                    "x": 288,
+                    "y": 124,
+                    "z": 65,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 1.6
+                }
+            },
+            {
+                "name": "Swingshot Path - Gold Bolt",
+                "value": {
+                    "x": 172.5,
+                    "y": 227.3,
+                    "z": 50,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 0
+                }
+            },
+            {
+                "name": "Swingshot Path - End",
+                "value": {
+                    "x": 116.6,
+                    "y": 91.1,
+                    "z": 66,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": -1.5
+                }
+            },
+            {
+                "name": "Tunnel - Gold Bolt",
+                "value": {
+                    "x": 264.3,
+                    "y": 119.5,
+                    "z": 34.5,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 1.95
+                }
+            }
+        ]
+    }
+]

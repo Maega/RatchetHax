@@ -1,0 +1,73 @@
+[
+    {
+        "planet": 5,
+        "locations": [
+            {
+                "name": "Slim Cognito",
+                "value": {
+                    "x": 467.6,
+                    "y": 446.6,
+                    "z": 431.5,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 2.4
+                }
+            },
+            {
+                "name": "Clank Section - Segment 1 (Clank) End",
+                "value": {
+                    "x": 142,
+                    "y": 640,
+                    "z": 80,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 0
+                }
+            },
+            {
+                "name": "Clank Section - Segment 2 (Ratchet) End",
+                "value": {
+                    "x": 152,
+                    "y": 635,
+                    "z": 60,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 0
+                }
+            },
+            {
+                "name": "Clank Section - Segment 3 (Clank) End",
+                "value": {
+                    "x": 202,
+                    "y": 725,
+                    "z": 83,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 0
+                }
+            },
+            {
+                "name": "Clank Section - Segment 4 (Ratchet) End",
+                "value": {
+                    "x": 230,
+                    "y": 640,
+                    "z": 60,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": 0
+                }
+            },
+            {
+                "name": "Sewer Entrance",
+                "value": {
+                    "x": 230,
+                    "y": 405,
+                    "z": 940,
+                    "pitch": 0,
+                    "roll": 0,
+                    "yaw": -1.5
+                }
+            }
+        ]
+    }
+]
