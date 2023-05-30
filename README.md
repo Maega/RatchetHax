@@ -2,7 +2,7 @@
 
 A Node.js-based memory editor and trainer for the Ratchet & Clank PS2 series.
 
-RatchetHax can be used standalone via the `sample.js` interactive sample code to do various trainer-ish tasks like give yourself bolts, weapons etc. and show the debug menu (in RC1).
+RatchetHax includes a standalone trainer via the `trainer.js` sample code that has various features like the ability to give yourself bolts, weapons etc, set the player's location and show the debug menu (in RC1).
 
 It can also be used in your own project to write scripts and game mods with JavaScript by importing `Game.js` into your project and using the [API](#api-examples) documented below.
 
@@ -12,10 +12,12 @@ It can also be used in your own project to write scripts and game mods with Java
     * Only *v19.x* has been tested but most recent versions should work fine.
 * A PS2 Emulator
     * Memory addresses are currently tested on *PCSX2 1.6.0*, offsets *may* need to be adjusted for other emulators.
+* *or* a PS3 Emulator
+    * Memory address are offset by *0x300000000* bytes which should be compatible with most versions of *RPCS3*.
 
-## Quick Start
+## Trainer Quick Start
 
-*This section is intended as a quick guide to get started for beginners on Windows who aren't familiar with Node.js or the command line.*
+*This section is intended as a quick guide to get started with the included trainer for beginners on Windows who aren't familiar with Node.js or the command line.*
 
 1. Install [Node.js](https://nodejs.org/en) if it's not already installed
 2. [Download](https://github.com/ParadoxEpoch/RatchetHax/archive/refs/heads/main.zip) the RatchetHax project code
@@ -23,7 +25,7 @@ It can also be used in your own project to write scripts and game mods with Java
 4. Open *Windows Terminal* or *Command Prompt* and navigate to the folder you extracted the zip to
     * This is easiest to do by right clicking an empty space in the folder and then choosing *Open in Terminal*
 5. Run `npm install` to automatically install dependencies
-6. Finally, run `node sample.js` to run the interactive sample code
+6. Finally, run `node trainer.js` to run the included sample trainer
 
 ## Install
 
@@ -67,10 +69,10 @@ const game = Game(processId, gameVersion);
 
 ### or...
 
-1. Run the `sample.js` example for a simple, interactive implementation of RatchetHax.
-    * The sample.js example requires `inquirer`. If you installed dependencies via the project's `package.json` file, you're good to go.
+1. Run the `trainer.js` example for a simple, interactive implementation of RatchetHax.
+    * The trainer.js example requires `inquirer`. If you installed dependencies via the project's `package.json` file, you're good to go.
 ```bash
-node sample.js
+node trainer.js
 ```
 
 ## API Examples
@@ -291,7 +293,7 @@ Currently, only the original v1.00 (Black Label) NTSC version of Ratchet & Clank
 
 Early support has now been added for several other games in the series. Not all functionality is working or fully tested yet, but progress is being made on implementing full support for these games on both PS2 and PS3.
 
-Adding support for other Ratchet & Clank games is as simple as cloning [an existing address file](games/rc1_ntsc_v1.js) and making the neccessary address edits. [Game.js](Game.js) will automatically detect and import all address files in [./games](games) on launch.
+Adding support for other Ratchet & Clank games is as simple as cloning [an existing address file](games/rc1_ps2_scus97199.js) and making the neccessary address edits. [Game.js](Game.js) will automatically detect and import all address files in [./games](games) on launch.
 
 I'm working on adding support for new builds as time permits. If you'd like to contribute your own, feel free to open an issue or submit a PR. See the *[Contributing](#contributing)* section for more info.
 
@@ -318,7 +320,7 @@ When instantiating the Game class, you'll need to pass a game version string par
 
 If you have any improvements, fixes or suggestions feel free to submit a pull request or open a new issue.
 
-Alternatively, if you'd like to support ongoing development of this and other repositories a donation would be very much appreciated. I accept direct crypto donations via any of the addresses below or through Coinbase Commerce.
+Alternatively, if you'd like to support ongoing development of this and other open source projects a donation would be very much appreciated. I accept direct crypto donations via any of the addresses below or through Coinbase Commerce.
 
 **BTC:** bc1q6kqv5u2368j4l00rls5frg78wt7m6vf7a50sa7
 
