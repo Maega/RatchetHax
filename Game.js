@@ -164,6 +164,33 @@ export default class Game {
         memoryjs.writeBuffer(this.process, this.address.posBase, posBuf);
     }
 
+    get freecam() {
+        const debug = this.address.debug;
+        const offset = debug?.levelOffsets[this.currentPlanet?.id];
+
+        if (!offset) return undefined; //console.error('Freecam is not supported by this game or is not yet implemented.');
+
+        let isEnabled = false;
+        const controlVal = this._readMem([offset + debug.control[0], debug.control[1]]);
+        //const updateVal = this._readMem([offset + debug.update[0], debug.update[1]]);
+
+        if (controlVal !== 0) isEnabled = true; //&& updateVal !== 15
+
+        return isEnabled;
+    }
+    set freecam(value) {
+        const debug = this.address.debug;
+        const offset = debug.levelOffsets[this.currentPlanet.id];
+
+        if (value) {
+            this._writeMem([offset + debug.control[0], debug.control[1]], 2);
+            this._writeMem([offset + debug.update[0], debug.update[1]], 0);
+        } else {
+            this._writeMem([offset + debug.control[0], debug.control[1]], 0);
+            this._writeMem([offset + debug.update[0], debug.update[1]], 15);
+        }
+    }
+
     weapons(weaponId) {
         const self = this;
         const weapon = this.address.weapons[weaponId];
