@@ -191,6 +191,58 @@ export default class Game {
         }
     }
 
+    get worldUpdate() {
+        const self = this;
+        const debug = this.address.debug;
+        const offset = debug?.levelOffsets[this.currentPlanet?.id];
+        if (!offset) return undefined; //console.error('Debugging functions are not supported by this game or are not yet implemented.');
+        const addr = [offset + debug.update[0], debug.update[1]];
+
+        const types = {
+            player: 1,
+            mobys: 2,
+            parts: 4,
+            camera: 8,
+            step: 16
+        }
+
+        const updateVal = this._readMem(addr);
+
+        return {
+            get player() {
+                return !!(updateVal & types.player);
+            },
+            set player(value) {
+                self._writeMem(addr, value ? (updateVal | types.player) : (updateVal & ~types.player));
+            },
+            get mobys() {
+                return !!(updateVal & types.mobys);
+            },
+            set mobys(value) {
+                self._writeMem(addr, value ? (updateVal | types.mobys) : (updateVal & ~types.mobys));
+            },
+            get parts() {
+                return !!(updateVal & types.parts);
+            },
+            set parts(value) {
+                self._writeMem(addr, value ? (updateVal | types.parts) : (updateVal & ~types.parts));
+            },
+            get camera() {
+                return !!(updateVal & types.camera);
+            },
+            set camera(value) {
+                self._writeMem(addr, value ? (updateVal | types.camera) : (updateVal & ~types.camera));
+            },
+            get step() {
+                return !!(updateVal & types.step);
+            },
+            set step(value) {
+                self._writeMem(addr, value ? (updateVal | types.step) : (updateVal & ~types.step));
+            }
+        }
+
+    }
+
     weapons(weaponId) {
         const self = this;
         const weapon = this.address.weapons[weaponId];
