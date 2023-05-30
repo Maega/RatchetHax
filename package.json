@@ -1,7 +1,10 @@
 {
-  "dependencies": {
-    "inquirer": "^9.2.4",
-    "memoryjs": "^3.5.1"
-  },
-  "type": "module"
+    "scripts": {
+        "trainer": "node --no-warnings trainer.js"
+    },
+    "dependencies": {
+        "inquirer": "^9.2.4",
+        "memoryjs": "^3.5.1"
+    },
+    "type": "module"
 }
