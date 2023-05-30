@@ -3,6 +3,7 @@
         "trainer": "node --no-warnings trainer.js"
     },
     "dependencies": {
+        "chalk": "^5.2.0",
         "inquirer": "^9.2.4",
         "memoryjs": "^3.5.1"
     },
