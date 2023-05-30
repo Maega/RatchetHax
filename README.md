@@ -4,7 +4,7 @@
 
 A Node.js-based memory editor and trainer for the Ratchet & Clank series on PS2 and PS3.
 
-RatchetHax includes a standalone trainer via the `trainer.js` sample code that has various features like the ability to give yourself bolts, weapons etc, set the player's location and show the debug menu (in RC1).
+RatchetHax includes a standalone trainer via `trainer.js` that has various features like the ability to give yourself bolts, weapons etc, set the player's location and show the debug menu (in RC1).
 
 It can also be used in your own project to write scripts and game mods with JavaScript by importing `Game.js` into your project and using the [API](#api-examples) documented below.
 
@@ -34,15 +34,15 @@ It can also be used in your own project to write scripts and game mods with Java
 When you launch the trainer, it'll look for any running emulators on your system. If it finds any, you'll be able to choose one of them from a list.
 If no emulator processes were found, you'll be prompted to specify a process name or PID to attach the trainer to.
 
-![Trainer Setup - Select Process](https://i.imgur.com/fZvU5ge.png)
+![Trainer Setup - Select Process](https://i.imgur.com/8xvEIjp.png)
 
 After selecting a process to attach to, the trainer will give you a list of supported games to choose from.
 
-![Trainer Setup - Select Game](https://i.imgur.com/WZDSwuZ.png)
+![Trainer Setup - Select Game](https://i.imgur.com/KDdBxa6.png)
 
 After selecting a game from the list, the trainer will attach to the emulator and you'll be taken to the main menu.
 
-![Trainer - Main Menu](https://i.imgur.com/qD82ARl.png)
+![Trainer - Main Menu](https://i.imgur.com/Ssq7ykL.png)
 
 ## Install
 
