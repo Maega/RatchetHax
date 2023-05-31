@@ -17,6 +17,31 @@ It can also be used in your own project to write scripts and game mods with Java
 * *or* a PS3 Emulator
     * Memory addresses are offset by *0x300000000* bytes which should be compatible with most versions of *RPCS3*.
 
+## Trainer Features
+
+* View Game Metrics
+   * *View current bolt count, health, current planet, equipped item and all unlocks*
+* Set Health
+* Infinite Health
+* Set Bolts
+* Unlock/Lock Weapons
+* Enable/Disable Gold Weapons
+* Infinite Ammo
+* Unlock/Lock Gadgets
+* Unlock/Lock Items
+* Teleport to Locations
+   * *Detects the currently loaded planet and allows the player to choose from common locations on that planet to teleport to*
+* Manually set player coordinates
+   * *x, y, z position and pitch, roll, yaw rotation*
+* Freecam
+   * *Uses the built-in debugging freecam (Cam+Chr) in RC1*
+* Freeze Player
+* Freeze Mobys *(Movable Objects)*
+* Freeze Particle FX
+* Freeze Camera
+* Open In-Game Debug Menu
+   * *Only available in RC1 and some RC2 & RC3 prototypes*
+
 ## Trainer Quick Start
 
 *This section is intended as a quick guide to get started with the included trainer for beginners on Windows who aren't familiar with Node.js or the command line.*
