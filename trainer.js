@@ -43,8 +43,9 @@ const setupQuestions = [{
         { name: 'Ratchet & Clank 1 [NPUA80643]', value: 'rc1_ps3_npua80643' },
         { name: 'Ratchet & Clank 2 [NPUA80644]', value: 'rc2_ps3_npua80644' },
         { name: 'Ratchet & Clank 3 [NPUA80645]', value: 'rc3_ps3_npua80645' },
-        { name: 'Ratchet & Clank Deadlocked [NPUA80646]', value: 'rc4_ps3_npua80646' },
-        { name: 'Ratchet & Clank Tools of Destruction [NPUA80965]', value: 'rctod_ps3_npua80965' }
+        { name: 'Ratchet & Clank: Deadlocked [NPUA80646]', value: 'rc4_ps3_npua80646' },
+        { name: 'Ratchet & Clank: Tools of Destruction [NPUA80965]', value: 'rctod_ps3_npua80965' },
+        { name: 'Ratchet & Clank: A Crack in Time [BCES00748]', value: 'rcacit_ps3_bces00748' }
     ]
 }];
 
