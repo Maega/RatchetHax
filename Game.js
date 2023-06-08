@@ -64,6 +64,13 @@ export default class Game {
         this._writeMem(this.address.raritanium, value);
     }
 
+    get multiplier() {
+        return this._readMem(this.address.multiplier);
+    }
+    set multiplier(value) {
+        this._writeMem(this.address.multiplier, value);
+    }
+
     get equipped() {
         const itemId = this._readMem(this.address.current.item);
 

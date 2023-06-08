@@ -7,7 +7,7 @@ export default {
     bigEndian: true,
     nanotech: [0x3014816AC, 'uint32'],
     bolts: [0x301329A90, 'uint32'],
-    multiplier: 0x301329ACA, // 1 byte, max 255 multiplier.
+    multiplier: [0x301329ACA, 'uint8'], // 1 byte, max 255 multiplier.
     raritanium: [0x301329A94, 'uint32'],
     mode: [null, 'uint32'],
     state: [null, 'uint32'],
