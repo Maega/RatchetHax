@@ -24,8 +24,13 @@ It can also be used in your own project to write scripts and game mods with Java
 * Set Health
 * Infinite Health
 * Set Bolts
+* Set Raritanium
+* Set Bolt Multiplier
+* Freeze Bolt Multiplier
 * Unlock/Lock Weapons
 * Enable/Disable Gold Weapons
+* Set Weapon Level
+* Set Weapon Ammo
 * Infinite Ammo
 * Unlock/Lock Gadgets
 * Unlock/Lock Items
@@ -93,8 +98,49 @@ When instantiating the Game class, you'll need to pass a game version string par
 | Ratchet & Clank 1 (PS3, NPUA80643) | rc1_ps3_npua80643 | PARTIAL |
 | Ratchet & Clank 2 (PS3, NPUA80644) | rc2_ps3_npua80644 | PARTIAL |
 | Ratchet & Clank 3 (PS3, NPUA80645) | rc3_ps3_npua80645 | PARTIAL |
-| Ratchet & Clank Deadlocked (PS3, NPUA80646) | rc4_ps3_npua80646 | PARTIAL |
-| Ratchet & Clank Tools of Destruction (PS3, NPUA80965) | rctod_ps3_npua80965 | PARTIAL |
+| Ratchet & Clank: Deadlocked (PS3, NPUA80646) | rc4_ps3_npua80646 | PARTIAL |
+| Ratchet & Clank: Tools of Destruction (PS3, NPUA80965) | rctod_ps3_npua80965 | PARTIAL |
+| Ratchet & Clank: A Crack in Time (PS3, BCES00748) | rcacit_ps3_bces00748 | PARTIAL |
+
+### Supported Features
+
+#### PS2 Games
+
+| Feature | RC1 | RC2 | RC3 | RC4 |
+| ------------ | :----: | :----: | :----: | :----: |
+| Health | :heavy_check_mark: | :x: | :x: | :x: |
+| Bolts | :heavy_check_mark: | :x: | :x: | :x: |
+| Raritanium | :heavy_minus_sign: | :x: | :heavy_minus_sign: | :heavy_minus_sign: |
+| Bolt Multiplier | :heavy_minus_sign: | :x: | :x: | :x: |
+| Unlock/Lock Weapons | :heavy_check_mark: | :x: | :x: | :x: |
+| Weapon Level | :heavy_check_mark: | :x: | :x: | :x: |
+| Weapon Ammo | :heavy_check_mark: | :x: | :x: | :x: |
+| Unlock/Lock Gadgets | :heavy_check_mark: | :x: | :x: | :x: |
+| Unlock/Lock Items | :heavy_check_mark: | :x: | :x: | :x: |
+| Unlock/Lock Planets | :heavy_check_mark: | :x: | :x: | :x: |
+| Teleport to Locations | :heavy_check_mark: | :x: | :x: | :x: |
+| Set Coordinates | :heavy_check_mark: | :x: | :x: | :x: |
+| Freecam Mode | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: |
+| World State | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: |
+
+#### PS3 Games
+
+| Feature | RC1 | RC2 | RC3 | RC4 | ToD | ACiT |
+| ------------ | :----: | :----: | :----: | :----: | :----: | :----: |
+| Health | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
+| Bolts | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Raritanium | :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_check_mark: |
+| Bolt Multiplier | :heavy_minus_sign: | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: | :x: |
+| Unlock/Lock Weapons | :x: | :heavy_check_mark: | :x: | :x: | :x: | :heavy_check_mark: |
+| Weapon Level | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: |
+| Weapon Ammo | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Unlock/Lock Gadgets | :x: | :heavy_check_mark: | :x: | :x: | :x: | :heavy_check_mark: |
+| Unlock/Lock Items | :x: | :heavy_check_mark: | :x: | :x: | :x: | :heavy_check_mark: |
+| Unlock/Lock Planets | :x: | :x: | :x: | :x: | :x: | :x: | :x: |
+| Teleport to Locations | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: |
+| Set Coordinates | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
+| Freecam Mode | :x: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: |
+| World State | :x: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: |
 
 ## Game Modes
 
