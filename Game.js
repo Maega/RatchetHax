@@ -34,7 +34,7 @@ export default class Game {
     }
 
     _readMem(addressObj) {
-        if (addressObj[0] === null) return console.error('Function is not supported by this game or is not yet implemented.');
+        if (!addressObj || addressObj[0] === null) return undefined;
         return memoryjs.readMemory(this.process, addressObj[0], memoryjs[addressObj[1].toUpperCase()]);
     }
 
