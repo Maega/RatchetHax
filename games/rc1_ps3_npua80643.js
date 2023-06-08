@@ -4,16 +4,16 @@
 */
 
 export default {
-    bigEndian: false,
-    nanotech: [0x3009BBFC8, 'uint8'],
-    bolts: [0x3009B9CE0, 'uint32'],
-    mode: [0x300A60748, 'uint32'],
-    state: [null, 'uint32'],
-    posBase: null,
+    bigEndian: true,
+    nanotech: [0x3009BBFCB, 'uint8'], // 0x3009BBFC8
+    bolts: [0x3009B9CE0, 'int32'],
+    mode: [0x300A60748, 'int32'],
+    state: [null, 'int32'],
+    posBase: 0x3009B9DA0,
     galacticMapBase: null, // 4 bytes * 18 slots. Read or write a 72 byte buffer from base.
     current: {
-        item: [null, 'uint8'],
-        planet: [null, 'uint8']
+        item: [0x3009B9CBF, 'uint8'],
+        planet: [0x3009B9CB3, 'uint8']
     },
     weapons: {
         bombglove: {
@@ -21,35 +21,35 @@ export default {
             name: 'Bomb Glove',
             unlocked: [null, 'uint8'],
             gold: null,
-            ammo: [null, 'uint32']
+            ammo: [0x3009BC114, 'uint32']
         },
         pyrocitor: {
             id: 16,
             name: 'Pyrocitor',
             unlocked: [null, 'uint8'],
             gold: null,
-            ammo: [null, 'uint32']
+            ammo: [0x3009bc12c, 'uint32']
         },
         blaster: {
             id: 15,
             name: 'Blaster',
             unlocked: [null, 'uint8'],
             gold: null,
-            ammo: [null, 'uint32']
+            ammo: [0x3009bc128, 'uint32']
         },
         gloveofdoom: {
             id: 20,
             name: 'Glove of Doom',
             unlocked: [null, 'uint8'],
             gold: null,
-            ammo: [null, 'uint32']
+            ammo: [0x3009bc13c, 'uint32']
         },
         mineglove: {
             id: 17,
             name: 'Mine Glove',
             unlocked: [null, 'uint8'],
             gold: null,
-            ammo: [null, 'uint32']
+            ammo: [0x3009bc130, 'uint32']
         },
         taunter: {
             id: 14,
@@ -70,7 +70,7 @@ export default {
             name: 'Devastator',
             unlocked: [null, 'uint8'],
             gold: null,
-            ammo: [null, 'uint32']
+            ammo: [0x3009BC118, 'uint32']
         },
         walloper: {
             id: 18,
@@ -84,28 +84,28 @@ export default {
             name: 'Visibomb Gun',
             unlocked: [null, 'uint8'],
             gold: false,
-            ammo: [null, 'uint32']
+            ammo: [0x3009bc120, 'uint32']
         },
         decoyglove: {
             id: 25,
             name: 'Decoy Glove',
             unlocked: [null, 'uint8'],
             gold: null,
-            ammo: [null, 'uint32']
+            ammo: [0x3009bc150, 'uint32']
         },
         dronedevice: {
             id: 24,
             name: 'Drone Device',
             unlocked: [null, 'uint8'],
             gold: false,
-            ammo: [null, 'uint32']
+            ammo: [0x3009bc14c, 'uint32']
         },
         teslaclaw: {
             id: 19,
             name: 'Tesla Claw',
             unlocked: [null, 'uint8'],
             gold: null,
-            ammo: [null, 'uint32']
+            ammo: [0x3009bc138, 'uint32']
         },
         morphoray: {
             id: 21,
@@ -119,7 +119,7 @@ export default {
             name: 'R.Y.N.O.',
             unlocked: [null, 'uint8'],
             gold: false,
-            ammo: [null, 'uint32']
+            ammo: [0x3009bc148, 'uint32']
         }
     },
     gadgets: {
