@@ -87,7 +87,7 @@ export default class Game {
     }
     set equipped(itemId) {
         const equippedItem = this.address.weapons[itemId] || this.address.gadgets[itemId];
-        if (!equippedItem) return console.error(`Weapon "${itemId}" does not exist.`);
+        if (!equippedItem) return console.error(`Weapon or gadget "${itemId}" does not exist.`);
         this._writeMem(this.address.current.item, equippedItem.id);
     }
 
