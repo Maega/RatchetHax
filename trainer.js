@@ -246,25 +246,40 @@ async function toggleFreezeMultiplier() {
 }
 
 let infiniteNanotechTimer;
+let startingNanotech;
 async function toggleInfiniteNanotech() {
     // If the timer is already set, clear it.
     if (infiniteNanotechTimer) {
+        // Clear the timer
         clearInterval(infiniteNanotechTimer);
+        // Restore the nanotech value
+        game.nanotech = startingNanotech;
+        // Reset globals
+        startingNanotech = undefined;
         infiniteNanotechTimer = undefined;
         return;
     }
 
-    // Freeze the health value
+    // Store the current nanotech value
+    startingNanotech = game.nanotech;
+
+    // Freeze the nanotech value
     infiniteNanotechTimer = setInterval(() => {
-        game.nanotech = 4;
+        game.nanotech = 100;
     }, 10);
 }
 
 let infiniteAmmoTimer;
+let startingAmmo;
 async function toggleInfiniteAmmo() {
     // If the timer is already set, clear it.
     if (infiniteAmmoTimer) {
+        // Clear the timer
         clearInterval(infiniteAmmoTimer);
+        // Restore the ammo values
+        Object.keys(startingAmmo).forEach(weaponKey => game.weapons(weaponKey).ammo = startingAmmo[weaponKey]);
+        // Reset globals
+        startingAmmo = undefined;
         infiniteAmmoTimer = undefined;
         return;
     }
@@ -272,15 +287,22 @@ async function toggleInfiniteAmmo() {
     // Get all weapons that use ammo.
     const weapons = game.weapons().filter(weapon => weapon.ammo !== undefined);
 
+    // Set startingAmmo to an object with current ammo values.
+    startingAmmo = {};
+    weapons.forEach(weapon => {
+        console.log(weapon);
+        startingAmmo[weapon.key] = weapons.find(thisWeapon => thisWeapon.key === weapon.key).ammo;
+    });
+
     // Freeze the ammo value
     infiniteAmmoTimer = setInterval(() => {
-        // Set all weapons to have 100 ammo.
+        // Set the ammo value to 100 for all weapons.
         weapons.forEach(weapon => weapon.ammo = 100);
     }, 10);
 }
 
 async function setCurrentWeaponAmmo() {
-    if (game.equipped.ammo === undefined) return console.error('You current have the ' + game.equipped.name + ' equipped which does not use ammo.');
+    if (game.equipped.ammo === undefined) return console.error('You currently have the ' + game.equipped.name + ' equipped which does not use ammo.');
     const answer = await inquirer.prompt([{
         type: 'number',
         name: 'ammo',
@@ -411,9 +433,22 @@ async function teleport() {
 }
 
 async function quit() {
+    // Restore original values for infinite nanotech and ammo
+    if (infiniteNanotechTimer) toggleInfiniteNanotech();
+    if (infiniteAmmoTimer) toggleInfiniteAmmo();
+
     game.close();
+    console.clear();
+    console.log(chalk.bold.green('Bye!'));
     process.exit(0);
 }
+
+/* if (process.platform === "win32") {
+    const readline = await import("readline");
+    var rl = readline.createInterface({input: process.stdin, output: process.stdout});
+    rl.on("SIGINT", () => process.emit("SIGINT"));
+} */
+process.on("SIGINT", () => quit());
 
 const menus = {
     weapons: () => {
@@ -506,8 +541,14 @@ async function main() {
     const choices = [
         new inquirer.Separator('───── General ─────'),
         { name: 'Show Metrics', value: showMetrics },
-        ...infiniteNanotechTimer ? [new inquirer.Separator('Set Health')] : [{ name: 'Set Health', value: setNanotech }],
-        { name: `Infinite Health: ${infiniteNanotechTimer ? chalk.greenBright('On') : chalk.redBright('Off')}`, value: toggleInfiniteNanotech },
+
+        // Health
+        ...game.nanotech !== undefined ? [
+            ...infiniteNanotechTimer ? [new inquirer.Separator('Set Health')] : [{ name: 'Set Health', value: setNanotech }],
+            { name: `Infinite Health: ${infiniteNanotechTimer ? chalk.greenBright('On') : chalk.redBright('Off')}`, value: toggleInfiniteNanotech }
+        ] : [],
+
+        // Bolts
         { name: 'Set Bolts', value: setBolts },
 
         // Raritanium
