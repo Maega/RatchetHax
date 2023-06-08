@@ -119,62 +119,62 @@ export default class Game {
 
     get playerPos() {
         const self = this;
-        const posBuf = memoryjs.readBuffer(this.process, this.address.posBase, 28);
+        const posBuf = memoryjs.readBuffer(this.process, this.address.posBase, this.address.posLength || 28);
         const view = new DataView(posBuf.buffer);
         return {
             get x() {
-                return view.getFloat32(0, !self.address.bigEndian);
+                return view.getFloat32(self.address.posOffsets?.x || 0, !self.address.bigEndian);
             },
             set x(value) {
-                view.setFloat32(0, value, !self.address.bigEndian);
+                view.setFloat32(self.address.posOffsets?.x || 0, value, !self.address.bigEndian);
                 memoryjs.writeBuffer(self.process, self.address.posBase, posBuf);
             },
             get y() {
-                return view.getFloat32(4, !self.address.bigEndian);
+                return view.getFloat32(self.address.posOffsets?.y || 4, !self.address.bigEndian);
             },
             set y(value) {
-                view.setFloat32(4, value, !self.address.bigEndian);
+                view.setFloat32(self.address.posOffsets?.y || 4, value, !self.address.bigEndian);
                 memoryjs.writeBuffer(self.process, self.address.posBase, posBuf);
             },
             get z() {
-                return view.getFloat32(8, !self.address.bigEndian);
+                return view.getFloat32(self.address.posOffsets?.z || 8, !self.address.bigEndian);
             },
             set z(value) {
-                view.setFloat32(8, value, !self.address.bigEndian);
+                view.setFloat32(self.address.posOffsets?.z || 8, value, !self.address.bigEndian);
                 memoryjs.writeBuffer(self.process, self.address.posBase, posBuf);
             },
             get pitch() {
-                return view.getFloat32(16, !self.address.bigEndian);
+                return view.getFloat32(self.address.posOffsets?.pitch || 16, !self.address.bigEndian);
             },
             set pitch(value) {
-                view.setFloat32(16, value, !self.address.bigEndian);
+                view.setFloat32(self.address.posOffsets?.pitch || 16, value, !self.address.bigEndian);
                 memoryjs.writeBuffer(self.process, self.address.posBase, posBuf);
             },
             get roll() {
-                return view.getFloat32(20, !self.address.bigEndian);
+                return view.getFloat32(self.address.posOffsets?.roll || 20, !self.address.bigEndian);
             },
             set roll(value) {
-                view.setFloat32(20, value, !self.address.bigEndian);
+                view.setFloat32(self.address.posOffsets?.roll || 20, value, !self.address.bigEndian);
                 memoryjs.writeBuffer(self.process, self.address.posBase, posBuf);
             },
             get yaw() {
-                return view.getFloat32(24, !self.address.bigEndian);
+                return view.getFloat32(self.address.posOffsets?.yaw || 24, !self.address.bigEndian);
             },
             set yaw(value) {
-                view.setFloat32(24, value, !self.address.bigEndian);
+                view.setFloat32(self.address.posOffsets?.yaw || 24, value, !self.address.bigEndian);
                 memoryjs.writeBuffer(self.process, self.address.posBase, posBuf);
             }
         }
     }
     set playerPos(value) {
-        const posBuf = memoryjs.readBuffer(this.process, this.address.posBase, 28);
+        const posBuf = memoryjs.readBuffer(this.process, this.address.posBase, this.address.posLength || 28);
         const view = new DataView(posBuf.buffer);
-        if (value.x) view.setFloat32(0, value.x, !this.address.bigEndian);
-        if (value.y) view.setFloat32(4, value.y, !this.address.bigEndian);
-        if (value.z) view.setFloat32(8, value.z, !this.address.bigEndian);
-        if (value.pitch) view.setFloat32(16, value.pitch, !this.address.bigEndian);
-        if (value.roll) view.setFloat32(20, value.roll, !this.address.bigEndian);
-        if (value.yaw) view.setFloat32(24, value.yaw, !this.address.bigEndian);
+        if (value.x) view.setFloat32(this.address.posOffsets?.x || 0, value.x, !this.address.bigEndian);
+        if (value.y) view.setFloat32(this.address.posOffsets?.y || 4, value.y, !this.address.bigEndian);
+        if (value.z) view.setFloat32(this.address.posOffsets?.z || 8, value.z, !this.address.bigEndian);
+        if (value.pitch) view.setFloat32(this.address.posOffsets?.pitch || 16, value.pitch, !this.address.bigEndian);
+        if (value.roll) view.setFloat32(this.address.posOffsets?.roll || 20, value.roll, !this.address.bigEndian);
+        if (value.yaw) view.setFloat32(this.address.posOffsets?.yaw || 24, value.yaw, !this.address.bigEndian);
         memoryjs.writeBuffer(this.process, this.address.posBase, posBuf);
     }
 
