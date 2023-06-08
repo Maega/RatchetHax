@@ -39,7 +39,7 @@ export default class Game {
     }
 
     _writeMem(addressObj, value) {
-        if (addressObj[0] === null) return console.error('Function is not supported by this game or is not yet implemented.');
+        if (!addressObj || addressObj[0] === null) return console.error('Function is not supported by this game or is not yet implemented.');
         return memoryjs.writeMemory(this.process, addressObj[0], value, memoryjs[addressObj[1].toUpperCase()]);
     }
 
