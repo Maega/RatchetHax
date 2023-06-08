@@ -82,7 +82,8 @@ export default class Game {
         const gadgetId = Object.keys(this.address.gadgets).find(key => this.address.gadgets[key].id === itemId);
         if (gadgetId) return this.gadgets(gadgetId);
 
-        return console.error('Unable to identify equipped item.');
+        console.error('Unable to identify equipped item.');
+        return {};
     }
     set equipped(itemId) {
         const equippedItem = this.address.weapons[itemId] || this.address.gadgets[itemId];
