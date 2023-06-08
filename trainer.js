@@ -13,7 +13,7 @@ const processChoices = filteredProcesses.map(p => {
         value: p.th32ProcessID
     }
 });
-processChoices.push({ name: 'Choose a different process...', value: null })
+processChoices.push({ name: 'Choose a different process...', value: null });
 
 console.clear();
 console.log(chalk.bold.green('─── Trainer Setup ───\n'));
@@ -312,6 +312,17 @@ async function setCurrentWeaponAmmo() {
     game.equipped.ammo = answer.ammo;
 }
 
+async function setCurrentWeaponLevel() {
+    if (game.equipped.level === false) return console.error('You currently have the ' + game.equipped.name + ' equipped which cannot be leveled.');
+    const answer = await inquirer.prompt([{
+        type: 'number',
+        name: 'level',
+        default: game.equipped.level,
+        message: `Enter new ${game.equipped.name} level:`
+    }]);
+    game.equipped.level = answer.level;
+}
+
 async function showDebugMenu() {
     // Since the mode value is unsigned, this will just overflow to the max uint to trigger the debug menu.
     game.mode = -1;
@@ -466,6 +477,7 @@ const menus = {
                     new inquirer.Separator(`── Equipped Weapon ──`),
                     ...infiniteAmmoTimer ? [new inquirer.Separator('Set Ammo')] : [{ name: 'Set Ammo', value: setCurrentWeaponAmmo }],
                     ...game.equipped.gold !== undefined ? [{ name: `Gold Upgrade: ${game.equipped.gold ? chalk.greenBright('Yes') : chalk.redBright('No')}`, value: () => {game.equipped.gold = !game.equipped.gold} }] : [],
+                    ...setup.version.split('_')[0] === 'rcacit' ? [{ name: 'Set Weapon Level', value: setCurrentWeaponLevel }] : [],
                 ] : []
             ]
         }
