@@ -285,6 +285,16 @@ export default class Game {
                 if (!weapon.gold) return console.error(`Weapon "${weapon.name}" does not have a gold variant.`);
                 memoryjs.writeMemory(self.process, weapon.gold, !!value ? 1 : 0, memoryjs.UINT8);
             },
+            get level() {
+                if (!weapon.level) return undefined;
+                return self._readMem(weapon.level) + 1;
+            },
+            set level(value) {
+                if (!weapon.level) return console.error(`Weapon "${weapon.name}" cannot be leveled or does not have a gold variant.`);
+                if (value < 1) return console.error(`Weapon "${weapon.name}" level must be higher than 0.`);
+                //memoryjs.writeMemory(self.process, weapon.gold, !!value ? 1 : 0, memoryjs.UINT8);
+                self._writeMem(weapon.level, value - 1);
+            },
             get ammo() {
                 if (!weapon.ammo) return undefined; //console.error(`Weapon "${weapon.name}" does not use ammo.`);
                 return self._readMem(weapon.ammo);
