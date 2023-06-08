@@ -207,6 +207,44 @@ async function setBolts() {
     game.bolts = answer.bolts;
 }
 
+async function setRaritanium() {
+    const answer = await inquirer.prompt([{
+        type: 'number',
+        name: 'raritanium',
+        default: game.raritanium,
+        message: 'Enter new raritanium count:'
+    }]);
+    game.raritanium = answer.raritanium;
+}
+
+async function setMultiplier() {
+    const answer = await inquirer.prompt([{
+        type: 'number',
+        name: 'multiplier',
+        default: game.multiplier,
+        message: 'Enter new multiplier value:'
+    }]);
+    game.multiplier = answer.multiplier;
+}
+
+let freezeMultiplierTimer;
+async function toggleFreezeMultiplier() {
+    // If the timer is already set, clear it.
+    if (freezeMultiplierTimer) {
+        clearInterval(freezeMultiplierTimer);
+        freezeMultiplierTimer = undefined;
+        return;
+    }
+
+    // Get the current multiplier value
+    const multiplier = game.multiplier;
+
+    // Freeze the multiplier value
+    freezeMultiplierTimer = setInterval(() => {
+        game.multiplier = multiplier;
+    }, 10);
+}
+
 let infiniteNanotechTimer;
 async function toggleInfiniteNanotech() {
     // If the timer is already set, clear it.
@@ -457,6 +495,7 @@ async function main() {
 
     if (infiniteNanotechTimer) console.log(chalk.bold.yellowBright('Infinite Health is currently active.'));
     if (infiniteAmmoTimer) console.log(chalk.bold.yellowBright('Infinite Ammo is currently active.'));
+    if (freezeMultiplierTimer) console.log(chalk.bold.yellowBright('Bolt multiplier is currently locked.'));
     if (game.freecam) console.log(chalk.bold.yellowBright('Freecam is currently active.'));
     if (!game.freecam && game.worldUpdate && !game.worldUpdate.player) console.log(chalk.bold.yellowBright('Player is currently frozen.'));
     if (!game.freecam && game.worldUpdate && !game.worldUpdate.mobys) console.log(chalk.bold.yellowBright('Mobys are currently frozen.'));
@@ -471,6 +510,16 @@ async function main() {
         { name: `Infinite Health: ${infiniteNanotechTimer ? chalk.greenBright('On') : chalk.redBright('Off')}`, value: toggleInfiniteNanotech },
         { name: 'Set Bolts', value: setBolts },
 
+        // Raritanium
+        ...game.raritanium !== undefined ? [{ name: 'Set Raritanium', value: setRaritanium }] : [],
+
+        // Multiplier
+        ...game.multiplier !== undefined ? [
+            { name: 'Set Multiplier', value: setMultiplier },
+            { name: `Lock Multiplier: ${freezeMultiplierTimer ? chalk.greenBright('On') : chalk.redBright('Off')}`, value: toggleFreezeMultiplier }
+        ] : [],
+
+        // Items Submenus
         new inquirer.Separator('───── Items ─────'),
         { name: 'Weapons Menu >>', value: async () => await menu('weapons') },
         { name: 'Gadgets & Items Menu >>', value: async () => await menu('gadgetsItems') },
