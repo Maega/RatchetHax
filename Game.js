@@ -57,6 +57,13 @@ export default class Game {
         this._writeMem(this.address.bolts, value);
     }
 
+    get raritanium() {
+        return this._readMem(this.address.raritanium);
+    }
+    set raritanium(value) {
+        this._writeMem(this.address.raritanium, value);
+    }
+
     get equipped() {
         const itemId = this._readMem(this.address.current.item);
 
