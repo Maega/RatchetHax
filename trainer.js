@@ -329,6 +329,28 @@ async function showDebugMenu() {
     game.mode = -1;
 }
 
+let freezePositionTimer;
+let startingPos;
+async function toggleFreezePosition() {
+    // If the timer is already set, clear it.
+    if (freezePositionTimer) {
+        // Clear the timer
+        clearInterval(freezePositionTimer);
+        // Reset globals
+        startingPos = undefined;
+        freezePositionTimer = undefined;
+        return;
+    }
+
+    // Set startingPos to the current coordinates of the player.
+    startingPos = {...game.playerPos};
+
+    // Freeze the position
+    freezePositionTimer = setInterval(() => {
+        game.playerPos = startingPos;
+    }, 10);
+}
+
 async function setPos() {
     const currentPos = {...game.playerPos};
     const newPos = await inquirer.prompt([{
@@ -367,9 +389,100 @@ async function setPos() {
         default: currentPos.yaw,
         message: 'Enter new yaw value (-Pi to +Pi):'
     }]);
+	if (freezePositionTimer) startingPos = newPos; // Update the startingPos if freezePosition is active
     game.playerPos = newPos;
     console.clear();
 }
+
+/* [{
+	"planetId": 1,
+	"name": "Tabora - Near the ship",
+	"x": 0,
+	"y": 0,
+	"z": 0,
+	"pitch": 0,
+	"roll": 0,
+	"yaw": 0
+}] */
+const savedPositions = [];
+
+async function addSavedPos() {
+	console.log(chalk.bold.green(`─── Save Current Location (${game.currentPlanet.name}) ───\n`));
+	const answer = await inquirer.prompt([{
+        type: 'input',
+        name: 'name',
+        default: 'Saved Location ' + (savedPositions.length + 1),
+        message: 'Choose a name for this saved location:'
+    }]);
+
+	savedPositions.push({
+		planetId: game.currentPlanet.id,
+		name: answer.name,
+		...game.playerPos
+	});
+	console.clear();
+}
+
+async function loadSavedPos() {
+	if (!savedPositions.length) return;
+	console.log(chalk.bold.green(`─── Teleport to Saved Location (${game.currentPlanet.name}) ───\n`));
+	const answer = await inquirer.prompt([{
+		type: 'list',
+		name: 'pos',
+		message: 'Choose a saved location to load:',
+		loop: true,
+		pageSize: 20,
+		choices: [
+			...savedPositions.filter(pos => pos.planetId === game.currentPlanet.id).map(pos => {
+				return {
+					name: pos.name,
+					value: pos
+				}
+			}),
+			new inquirer.Separator(),
+			{ name: 'Go Back', value: null }
+		]
+	}]);
+
+	if (!answer.pos) return;
+	const position = {
+		x: answer.pos.x,
+		y: answer.pos.y,
+		z: answer.pos.z,
+		pitch: answer.pos.pitch,
+		roll: answer.pos.roll,
+		yaw: answer.pos.yaw
+	};
+	if (freezePositionTimer) startingPos = position; // Update the startingPos if freezePosition is active
+	game.playerPos = position;
+}
+
+async function deleteSavedPos() {
+	if (!savedPositions.length) return;
+	console.log(chalk.bold.green(`─── Delete Saved Location ───\n`));
+
+	const answer = await inquirer.prompt([{
+		type: 'list',
+		name: 'location',
+		message: 'Choose a saved location to delete:',
+		loop: true,
+		pageSize: 20,
+		choices: [
+			...savedPositions.filter(pos => pos.planetId === game.currentPlanet.id).map((pos, index) => {
+				return {
+					name: `${pos.name} (${game.planets().find(planet => planet.id === pos.planetId).name})`,
+					value: index
+				}
+			}),
+			new inquirer.Separator(),
+			{ name: 'Go Back', value: null }
+		]
+	}]);
+
+	if (answer.location === null) return;
+	savedPositions.splice(answer.location, 1);
+}
+
 
 async function showMetrics() {
     console.log(chalk.bold.green('─── Game Metrics ───\n'));
@@ -438,7 +551,10 @@ async function teleport() {
         choices: [...locations, new inquirer.Separator('───────────────────'), { name: 'Go Back', value: undefined }]
     }]);
 
-    if (choice.playerPos) game.playerPos = choice.playerPos;
+    if (choice.playerPos) {
+		if (freezePositionTimer) startingPos = choice.playerPos; // Update the startingPos if freezePosition is active
+		game.playerPos = choice.playerPos;
+	}
     
     console.clear();
 
@@ -507,7 +623,18 @@ const menus = {
                 { name: `Freeze Camera: ${game.worldUpdate?.camera ? chalk.redBright('Off') : chalk.greenBright('On')}`, value: () => {game.worldUpdate.camera = !game.worldUpdate.camera} },
             ]
         }
-    }
+    },
+	savedLocations: () => {
+		return {
+			name: 'Saved Locations',
+			choices: [
+				{ name: 'Save Current Location', value: addSavedPos },
+				// Only show loadSavedPos if there are saved positions for the current planet
+				...savedPositions.filter(pos => pos.planetId === game.currentPlanet?.id).length > 0 ? [{ name: 'Teleport to Saved Location', value: loadSavedPos}] : [],
+				...savedPositions.length > 0 ? [{ name: 'Delete Saved Location', value: deleteSavedPos}] : []
+			]
+		}
+	}
 }
 
 async function menu(menuKey) {
@@ -581,6 +708,8 @@ async function main() {
         new inquirer.Separator('──── Location ─────'),
         { name: 'Teleport to Location', value: teleport },
         { name: 'Set Player Coordinates', value: setPos },
+		{ name: 'Freeze Position: ' + (freezePositionTimer ? chalk.greenBright('On') : chalk.redBright('Off')), value: toggleFreezePosition },
+		{ name: 'Saved Locations >>', value: async () => await menu('savedLocations')},
 
         // * Debugging Options (RC1 only)
         ...setup.version.split('_')[0] === 'rc1' ? [
