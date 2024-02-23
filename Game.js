@@ -376,6 +376,7 @@ export default class Game {
         return {
             id: planet.id,
             name: planet.name,
+			key: planetId,
             get unlocked() {
                 return planetUnlocks.includes(planet.id);
             },
