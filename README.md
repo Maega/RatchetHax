@@ -52,12 +52,13 @@ It can also be used in your own project to write scripts and game mods with Java
 *This section is intended as a quick guide to get started with the included trainer for beginners on Windows who aren't familiar with Node.js or the command line.*
 
 1. Install [Node.js](https://nodejs.org/en) if it's not already installed
-2. [Download](https://github.com/ParadoxEpoch/RatchetHax/archive/refs/heads/main.zip) the RatchetHax project code
-3. Extract the downloaded zip file to a folder on your computer
-4. Open *Windows Terminal* or *Command Prompt* and navigate to the folder you extracted the zip to
+   - **NOTE:** When installing Node.js, make sure to tick the checkbox to *"Automatically install the necessary tools"* in the *"Tools for Native Modules"* step. This is required to compile one of the dependencies of RatchetHax.
+3. [Download](https://github.com/ParadoxEpoch/RatchetHax/archive/refs/heads/main.zip) the RatchetHax project code
+4. Extract the downloaded zip file to a folder on your computer
+5. Open *Windows Terminal* or *Command Prompt* and navigate to the folder you extracted the zip to
     * This is easiest to do by right clicking an empty space in the folder and then choosing *Open in Terminal*
-5. Run `npm install` to automatically install dependencies
-6. Finally, run `npm run trainer` to run the included sample trainer
+6. Run `npm install` to automatically install dependencies
+7. Finally, run `npm run trainer` to run the included sample trainer
 
 ## Trainer Usage
 
